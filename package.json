@@ -1,0 +1,29 @@
+{
+  "name": "custom-own-location",
+  "version": "1.0.0",
+  "description": "Fully free plugin allow you to quickly add Google Maps to your WordPress website.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-ascode/custom-own-location.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-2",
+  "bugs": {
+    "url": "https://github.com/the-ascode/custom-own-location/issues"
+  },
+  "homepage": "https://github.com/the-ascode/custom-own-location#readme",
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "laravel-mix": "^6.0.13",
+    "postcss": "^8.2.7"
+  }
+}

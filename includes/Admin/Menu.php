@@ -28,7 +28,7 @@ class Menu {
 	 * Output of dashboard page
 	 */
 	public function col_dashboard_page() {
-		echo '<h1>hello</h1>';
+		echo '<div id="col-dashboard-page-app"></div>';
 	}
 
 }

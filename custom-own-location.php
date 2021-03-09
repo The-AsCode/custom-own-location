@@ -62,6 +62,7 @@ final class Custom_Own_Location {
 	 */
 	private function run_admin_classes() {
 		new COL\Admin\Menu();
+		new COL\Admin\Enqueue();
 	}
 
 }
