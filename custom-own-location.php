@@ -2,7 +2,7 @@
 /**
 * Plugin Name:       Custom Own Location
 * Plugin URI:        https://sourov.im/ascode
-* Description:       Handle the basics with this plugin.
+* Description:       Fully free plugin allow you to quickly add Google Maps to your WordPress website.
 * Version:           1.0.0
 * Requires at least: 5.0
 * Requires PHP:      7.0
@@ -15,6 +15,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	die( 'Please run `composer install` on wp-content/plugins/custom-own-location directory.' );
+}
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 final class Custom_Own_Location {
 
@@ -39,7 +45,7 @@ final class Custom_Own_Location {
  	private function __construct() {
 		$this->define_constants();
 
-
+		$this->run_admin_classes();
  	}
 
 	/**
@@ -49,6 +55,13 @@ final class Custom_Own_Location {
  		define( 'COL__FILE__', __FILE__ );
  		define( 'COL_DIR_PATH', plugin_dir_path( __FILE__ ) );
  		define( 'COL_DIR_URL', plugin_dir_url( __FILE__ ) );
+	}
+
+	/**
+	 * Initialize admin classes
+	 */
+	private function run_admin_classes() {
+		new COL\Admin\Menu();
 	}
 
 }

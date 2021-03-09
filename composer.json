@@ -1,0 +1,9 @@
+{
+	"name": "ascode/custom-own-location",
+	"description": "Add Google Maps to your WordPress website",
+	"autoload": {
+		"psr-4": {
+			"COL\\": "includes/"
+		}
+	}
+}
