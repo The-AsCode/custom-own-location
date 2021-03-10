@@ -21,7 +21,7 @@ class Enqueue {
 		if ( 'toplevel_page_col_dashboard' === $page ) {
 			$filepath = COL_DIR_PATH . 'assets/admin/js/locations.js';
 			$fileurl  = COL_DIR_URL . 'assets/admin/js/locations.js';
-			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ) );
+			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ), true );
 		}
 
 	}
