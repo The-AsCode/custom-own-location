@@ -1,6 +1,5 @@
 import { Grid, Button } from '@material-ui/core';
-
-import MapList from './components/MapList';
+import MapsAutoComplete from './components/maps/MapsAutoComplete';
 
 export default () => {
   return(
@@ -13,8 +12,8 @@ export default () => {
           <Button variant="contained" color="primary">Add New Location</Button>
         </Grid>
       </Grid>
-
-      <MapList />
+      
+      <MapsAutoComplete />
     </div>
   );
 }

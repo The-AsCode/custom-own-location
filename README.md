@@ -13,7 +13,7 @@ Run `composer install`
 
 ## Build Assets
 
-Run `npm instal`
+Run `npm install`
 
 Run `npm run watch`
 

@@ -12,6 +12,7 @@ export default () => {
     {name: "name1"},
     {name: "name3"},
     {name: "name2"},
+    {name: "name5"}
   ];
 
   return (
