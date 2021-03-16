@@ -6284,7 +6284,15 @@ var MapsAutoComplete = /*#__PURE__*/function (_React$Component) {
       (0,react_places_autocomplete__WEBPACK_IMPORTED_MODULE_1__.geocodeByAddress)(address).then(function (results) {
         return (0,react_places_autocomplete__WEBPACK_IMPORTED_MODULE_1__.getLatLng)(results[0]);
       }).then(function (latLng) {
-        return console.log('Success', latLng);
+        console.log('Success', latLng);
+
+        _this.setState({
+          address: address
+        });
+
+        _this.setState({
+          mapCenter: latLng
+        });
       })["catch"](function (error) {
         return console.error('Error', error);
       });
@@ -6292,7 +6300,7 @@ var MapsAutoComplete = /*#__PURE__*/function (_React$Component) {
 
     _this.state = {
       address: '',
-      showingInfoWindow: false,
+      showingInfoWindow: true,
       activeMarker: {},
       selectedPlace: {},
       mapCenter: {
@@ -6369,7 +6377,7 @@ var MapsAutoComplete = /*#__PURE__*/function (_React$Component) {
           },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(google_maps_react__WEBPACK_IMPORTED_MODULE_3__.Marker, {
             onClick: this.onMarkerClick,
-            name: 'Current location',
+            name: this.state.address,
             position: {
               lat: this.state.mapCenter.lat,
               lng: this.state.mapCenter.lng

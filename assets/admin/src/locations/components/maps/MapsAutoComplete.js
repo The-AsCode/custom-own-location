@@ -10,7 +10,7 @@ export class MapsAutoComplete extends React.Component {
 	    super(props);
 	    this.state = { 
 	    	address: '',
-	    	showingInfoWindow: false,
+	    	showingInfoWindow: true,
 	    	activeMarker: {},
 	    	selectedPlace: {},
 
@@ -25,7 +25,8 @@ export class MapsAutoComplete extends React.Component {
 		this.setState({
 		    selectedPlace: props,
 		    activeMarker: marker,
-		    showingInfoWindow: true
+		    showingInfoWindow: true,
+
 		});
 
 	onMapClicked = (props) => {
@@ -44,7 +45,11 @@ export class MapsAutoComplete extends React.Component {
   	handleSelect = address => {
     	geocodeByAddress(address)
       	.then(results => getLatLng(results[0]))
-      	.then(latLng => console.log('Success', latLng))
+      	.then(latLng =>{
+      		console.log('Success', latLng)
+      		this.setState({address});
+      		this.setState({ mapCenter: latLng});
+      	})
       	.catch(error => console.error('Error', error));
   	};
 
@@ -114,7 +119,7 @@ export class MapsAutoComplete extends React.Component {
 	          		}}
 	          	>
 	        		<Marker onClick={this.onMarkerClick}
-	                	name={'Current location'}
+	                	name={this.state.address}
 	                	position ={{
 	                		lat: this.state.mapCenter.lat,
 	                		lng: this.state.mapCenter.lng
