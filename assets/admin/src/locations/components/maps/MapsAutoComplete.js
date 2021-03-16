@@ -56,7 +56,7 @@ export class MapsAutoComplete extends React.Component {
 		}
 
 		return (
-			<div>
+			<div style = {{width: '30vw', height: '25vh'}}>
 				<PlacesAutocomplete
 					value={this.state.address}
 			       	onChange={this.handleChange}

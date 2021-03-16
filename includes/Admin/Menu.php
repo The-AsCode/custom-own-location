@@ -20,7 +20,8 @@ class Menu {
 			'Locations',
 			'manage_options',
 			'col_dashboard',
-			[ $this, 'col_dashboard_page' ]
+			[ $this, 'col_dashboard_page' ],
+			'dashicons-location'
 		);
 	}
 
