@@ -6300,7 +6300,7 @@ var MapsAutoComplete = /*#__PURE__*/function (_React$Component) {
 
     _this.state = {
       address: '',
-      showingInfoWindow: true,
+      showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
       mapCenter: {
@@ -6385,10 +6385,14 @@ var MapsAutoComplete = /*#__PURE__*/function (_React$Component) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(google_maps_react__WEBPACK_IMPORTED_MODULE_3__.InfoWindow, {
             marker: this.state.activeMarker,
             visible: this.state.showingInfoWindow,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
                 children: this.state.selectedPlace.name
-              })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+                children: ["Latitude:", this.state.mapCenter.lat]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+                children: ["Longitude:", this.state.mapCenter.lng]
+              })]
             })
           })]
         })]

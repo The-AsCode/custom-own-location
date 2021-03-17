@@ -10,7 +10,7 @@ export class MapsAutoComplete extends React.Component {
 	    super(props);
 	    this.state = { 
 	    	address: '',
-	    	showingInfoWindow: true,
+	    	showingInfoWindow: false,
 	    	activeMarker: {},
 	    	selectedPlace: {},
 
@@ -131,6 +131,8 @@ export class MapsAutoComplete extends React.Component {
 	          			visible={this.state.showingInfoWindow}>
 	            	<div>
 	              		<h1>{this.state.selectedPlace.name}</h1>
+	              		<h2>Latitude:{this.state.mapCenter.lat}</h2>
+	              		<h2>Longitude:{this.state.mapCenter.lng}</h2>
 	            	</div>
 	        		</InfoWindow>
 	      		</Map>
