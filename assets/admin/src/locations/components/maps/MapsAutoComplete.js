@@ -5,6 +5,8 @@ import PlacesAutocomplete, {
   getLatLng,
 } from 'react-places-autocomplete';
 
+import EditMaps from './EditMaps';
+
 export class MapsAutoComplete extends React.Component {
 	constructor(props) {
 	    super(props);
@@ -17,17 +19,26 @@ export class MapsAutoComplete extends React.Component {
 	    	mapCenter: {
 	    		lat: 23.786746,
 	    		lng : 90.373984 
-	    	}
+	    	},
+
+	    	isClicked : false
 	    };
   	}
 
-	onMarkerClick = (props, marker, e) =>
+	onMarkerClick = (props, marker, e) =>{
 		this.setState({
 		    selectedPlace: props,
 		    activeMarker: marker,
 		    showingInfoWindow: true,
 
 		});
+
+		this.setState({
+			isClicked: true
+		});
+
+	}
+		
 
 	onMapClicked = (props) => {
 		if (this.state.showingInfoWindow) {
@@ -54,6 +65,11 @@ export class MapsAutoComplete extends React.Component {
   	};
 
 	render() {
+
+		const {isClicked} = this.state
+		let mapInfo
+
+		mapInfo = isClicked ? <EditMaps /> : " "
 
 		const style = { 
 		  width: '100%',
@@ -130,12 +146,16 @@ export class MapsAutoComplete extends React.Component {
 	         			marker={this.state.activeMarker}
 	          			visible={this.state.showingInfoWindow}>
 	            	<div>
-	              		<h1>{this.state.selectedPlace.name}</h1>
-	              		<h2>Latitude:{this.state.mapCenter.lat}</h2>
-	              		<h2>Longitude:{this.state.mapCenter.lng}</h2>
+	              		<h3>{this.state.selectedPlace.name}</h3>
+	              		<h4>Latitude:{this.state.mapCenter.lat}</h4>
+	              		<h4>Longitude:{this.state.mapCenter.lng}</h4>
 	            	</div>
 	        		</InfoWindow>
 	      		</Map>
+
+	      		<div style={{marginTop:"50vh"}}>
+	      			{mapInfo}
+	      		</div>
 	      	</div>
 		)
 	}
