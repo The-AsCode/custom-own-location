@@ -11,7 +11,8 @@ import MapsAutoComplete from './MapsAutoComplete';
 
 export default class EditMaps extends React.Component {
 
-	render() {
+	render(props) {
+		console.log(props);
 		return (
 			<div>
 				<React.Fragment>

@@ -67,9 +67,7 @@ export class MapsAutoComplete extends React.Component {
 	render() {
 
 		const {isClicked} = this.state
-		let mapInfo
-
-		mapInfo = isClicked ? <EditMaps /> : " "
+		let mapInfo = isClicked ? <EditMaps/> : " "
 
 		const style = { 
 		  width: '100%',
@@ -152,7 +150,6 @@ export class MapsAutoComplete extends React.Component {
 	            	</div>
 	        		</InfoWindow>
 	      		</Map>
-
 	      		<div style={{marginTop:"50vh"}}>
 	      			{mapInfo}
 	      		</div>
