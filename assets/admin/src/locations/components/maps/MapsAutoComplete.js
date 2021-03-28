@@ -132,7 +132,9 @@ export class MapsAutoComplete extends React.Component {
 	          			lng: this.state.mapCenter.lng
 	          		}}
 	          	>
-	        		<Marker onClick={this.onMarkerClick}
+	        		<Marker 
+	        			draggable={true} 
+	        			onClick={this.onMarkerClick}
 	                	name={this.state.address}
 	                	position ={{
 	                		lat: this.state.mapCenter.lat,
