@@ -5,21 +5,21 @@ import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
-
 import MapsAutoComplete from './MapsAutoComplete';
-
 
 export default class EditMaps extends React.Component {
 
-	render(props) {
-		console.log(props);
+	render() {
 		return (
 			<div>
 				<React.Fragment>
 			      <CssBaseline />
-			      <Container maxWidth="sm" style={{ backgroundColor: '#cfe8fc', height: '65vh' }}>
-			        <TextField label="Location Name" defaultValue="HEllo" />
-			        <TextField label="Location Coodonates" defaultValue="Hello World" />
+			      <Container>
+			        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '72vh', width: '22vw' }}>
+			        	<TextField style={{width: '17vw' }} label="Location Title" defaultValue="Hello" />
+			        	<TextField style={{width: '17vw' }} label="Location coordinates" defaultValue="Lat Lng" />
+			       	</Typography>  
+      					 
 			      </Container>
 			    </React.Fragment>
 			</div>
