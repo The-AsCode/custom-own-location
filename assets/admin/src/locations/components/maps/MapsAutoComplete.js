@@ -4,6 +4,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
+import Geocode from "react-geocode";
 
 import EditMaps from './EditMaps';
 
@@ -17,8 +18,8 @@ export class MapsAutoComplete extends React.Component {
 	    	selectedPlace: {},
 
 	    	mapCenter: {
-	    		lat: 23.786746,
-	    		lng : 90.373984 
+	    		lat: 0,
+	    		lng: 0
 	    	},
 
 	    	isClicked : false
@@ -30,13 +31,8 @@ export class MapsAutoComplete extends React.Component {
 		    selectedPlace: props,
 		    activeMarker: marker,
 		    showingInfoWindow: true,
-
+		    isClicked: true
 		});
-
-		this.setState({
-			isClicked: true
-		});
-
 	}
 		
 
@@ -63,6 +59,11 @@ export class MapsAutoComplete extends React.Component {
       	})
       	.catch(error => console.error('Error', error));
   	};
+
+  	onMarkerDragEnd = (event) => {
+	    let newLat = event.latLng.lat();
+        console.log(newLat);
+	};
 
 	render() {
 
@@ -135,6 +136,7 @@ export class MapsAutoComplete extends React.Component {
 	        		<Marker 
 	        			draggable={true} 
 	        			onClick={this.onMarkerClick}
+	        			onDragEnd={this.onMarkerDragEnd}
 	                	name={this.state.address}
 	                	position ={{
 	                		lat: this.state.mapCenter.lat,

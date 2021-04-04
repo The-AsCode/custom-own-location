@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Link, Switch,} from "react-router-dom";
 import { Grid, Button } from '@material-ui/core';
 import MapList from './components/MapList';
 import MapsAutoComplete from './components/maps/MapsAutoComplete';
+import CreateMaps from './components/maps/CreateMaps';
 
 export default class App extends React.Component {
   render() {
@@ -18,7 +19,7 @@ export default class App extends React.Component {
             </Grid>
           </Grid>
             <Switch>
-              <Route path="/createmap" exact component={MapsAutoComplete}/>
+              <Route path="/createmap" exact component={CreateMaps}/>
               <MapList/>
             </Switch>
         </div>
