@@ -1,6 +1,11 @@
 import React from 'react';
-import { withGoogleMap, GoogleMap, withScriptjs, InfoWindow, Marker } from "react-google-maps";
+import { withGoogleMap, 
+    GoogleMap, 
+    withScriptjs, 
+    InfoWindow, 
+    Marker } from "react-google-maps";
 import Geocode from "react-geocode";
+import Autocomplete from 'react-google-autocomplete';
 import EditMaps from './EditMaps';
 
 
@@ -105,13 +110,13 @@ export default class CreateMaps extends React.Component {
 
         let style = { 
           height: '100%',
-          width: isClicked == true ? '77%' : '100%',
+          width: isClicked == true ? '80%' : '100%',
         }
 
         const MapWithAMarker = withScriptjs(withGoogleMap(props =>
           <GoogleMap
             style = {style}
-            defaultZoom={1}
+            defaultZoom={4}
             defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
           >
             <Marker
@@ -135,15 +140,16 @@ export default class CreateMaps extends React.Component {
         ));
 
         return (
-            <div>
-                <MapWithAMarker
-                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places"
-                  loadingElement={<div style={{ height: `100%` }} />}
-                  containerElement={<div style={{ height: `300px` }} />}
-                  mapElement={<div style={style} />}
-                />
-
-                <div>
+            <div style = {{width: '85vw', height: '0vh'}}>
+                <div style={style}>
+                    <MapWithAMarker
+                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places"
+                      loadingElement={<div style={{ height: `100%` }} />}
+                      containerElement={<div style={{ height: `300px` }} />}
+                      mapElement={<div style={{ height: `100%` }} />}
+                    />
+                </div>
+                <div style={{marginLeft:"78.5%"}} >
                     {mapInfo}
                 </div>
             </div>

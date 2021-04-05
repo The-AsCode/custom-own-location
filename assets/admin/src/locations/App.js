@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import { HashRouter as Router, Route, Link, Switch,} from "react-router-dom";
 import { Grid, Button } from '@material-ui/core';
 import MapList from './components/MapList';
-import MapsAutoComplete from './components/maps/MapsAutoComplete';
 import CreateMaps from './components/maps/CreateMaps';
 
 export default class App extends React.Component {

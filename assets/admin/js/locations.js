@@ -15843,14 +15843,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ App)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Button/Button.js");
 /* harmony import */ var _components_MapList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/MapList */ "./assets/admin/src/locations/components/MapList.js");
-/* harmony import */ var _components_maps_MapsAutoComplete__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/maps/MapsAutoComplete */ "./assets/admin/src/locations/components/maps/MapsAutoComplete.js");
-/* harmony import */ var _components_maps_CreateMaps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/maps/CreateMaps */ "./assets/admin/src/locations/components/maps/CreateMaps.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_maps_CreateMaps__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/maps/CreateMaps */ "./assets/admin/src/locations/components/maps/CreateMaps.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15881,7 +15880,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
 var App = /*#__PURE__*/function (_React$Component) {
   _inherits(App, _React$Component);
 
@@ -15896,35 +15894,35 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.HashRouter, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.HashRouter, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "col-base-wrapper",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
             justify: "space-between",
             container: true,
             alignItems: "center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
               item: true,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
                 children: "Locations"
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
               item: true,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
                 variant: "contained",
                 color: "primary",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
                   to: "/createmap",
                   children: "Add New Location"
                 })
               })
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Switch, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
               path: "/createmap",
               exact: true,
-              component: _components_maps_CreateMaps__WEBPACK_IMPORTED_MODULE_3__.default
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_MapList__WEBPACK_IMPORTED_MODULE_1__.default, {})]
+              component: _components_maps_CreateMaps__WEBPACK_IMPORTED_MODULE_2__.default
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_MapList__WEBPACK_IMPORTED_MODULE_1__.default, {})]
           })]
         })
       });
@@ -16033,8 +16031,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-google-maps */ "./node_modules/react-google-maps/lib/index.js");
 /* harmony import */ var react_geocode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-geocode */ "./node_modules/react-geocode/lib/index.js");
-/* harmony import */ var _EditMaps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./EditMaps */ "./assets/admin/src/locations/components/maps/EditMaps.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_google_autocomplete__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-google-autocomplete */ "./node_modules/react-google-autocomplete/index.js");
+/* harmony import */ var _EditMaps__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EditMaps */ "./assets/admin/src/locations/components/maps/EditMaps.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16058,6 +16057,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -16183,20 +16183,20 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       var isClicked = this.state.isClicked;
-      var mapInfo = isClicked ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_EditMaps__WEBPACK_IMPORTED_MODULE_3__.default, {}) : " ";
+      var mapInfo = isClicked ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_EditMaps__WEBPACK_IMPORTED_MODULE_4__.default, {}) : " ";
       var style = {
         height: '100%',
-        width: isClicked == true ? '77%' : '100%'
+        width: isClicked == true ? '80%' : '100%'
       };
       var MapWithAMarker = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withGoogleMap)(function (props) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
           style: style,
-          defaultZoom: 1,
+          defaultZoom: 4,
           defaultCenter: {
             lat: _this2.state.mapPosition.lat,
             lng: _this2.state.mapPosition.lng
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.Marker, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.Marker, {
             position: {
               lat: _this2.state.markerPosition.lat,
               lng: _this2.state.markerPosition.lng
@@ -16204,31 +16204,43 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
             draggable: true,
             onDragEnd: _this2.onMarkerDragEnd,
             onClick: _this2.onMarkerClick,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.InfoWindow, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.InfoWindow, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 children: ["Location: ", _this2.state.address, "Lat: ", _this2.state.mapPosition.lat, "Lng: ", _this2.state.mapPosition.lng]
               })
             })
           })
         });
       }));
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(MapWithAMarker, {
-          googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places",
-          loadingElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            style: {
-              height: "100%"
-            }
-          }),
-          containerElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            style: {
-              height: "300px"
-            }
-          }),
-          mapElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            style: style
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        style: {
+          width: '85vw',
+          height: '0vh'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          style: style,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(MapWithAMarker, {
+            googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places",
+            loadingElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              style: {
+                height: "100%"
+              }
+            }),
+            containerElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              style: {
+                height: "300px"
+              }
+            }),
+            mapElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              style: {
+                height: "100%"
+              }
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          style: {
+            marginLeft: "78.5%"
+          },
           children: mapInfo
         })]
       });
@@ -16254,12 +16266,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ EditMaps)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/CssBaseline */ "./node_modules/@material-ui/core/esm/CssBaseline/CssBaseline.js");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
-/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Container */ "./node_modules/@material-ui/core/esm/Container/Container.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/CssBaseline */ "./node_modules/@material-ui/core/esm/CssBaseline/CssBaseline.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
+/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Container */ "./node_modules/@material-ui/core/esm/Container/Container.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
 /* harmony import */ var _MapsAutoComplete__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapsAutoComplete */ "./assets/admin/src/locations/components/maps/MapsAutoComplete.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _CreateMaps__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateMaps */ "./assets/admin/src/locations/components/maps/CreateMaps.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16292,6 +16305,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var EditMaps = /*#__PURE__*/function (_React$Component) {
   _inherits(EditMaps, _React$Component);
 
@@ -16306,25 +16320,25 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
   _createClass(EditMaps, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_4__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__.default, {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__.default, {
               component: "div",
               style: {
                 backgroundColor: '#cfe8fc',
                 height: '72vh',
-                width: '22vw'
+                width: '16vw'
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                 style: {
-                  width: '17vw'
+                  width: '15vw'
                 },
                 label: "Location Title",
                 defaultValue: "Hello"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                 style: {
-                  width: '17vw'
+                  width: '15vw'
                 },
                 label: "Location coordinates",
                 defaultValue: "Lat Lng"
@@ -67124,6 +67138,280 @@ if (false) {} else {
 
 "use strict";
 var regeneratorRuntime = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");function asyncGeneratorStep(e,r,n,t,o,a,c){try{var s=e[a](c),u=s.value}catch(e){return void n(e)}s.done?r(u):Promise.resolve(u).then(t,o)}function _asyncToGenerator(e){return function(){var r=this,n=arguments;return new Promise(function(t,o){var a=e.apply(r,n);function c(e){asyncGeneratorStep(a,t,o,c,s,"next",e)}function s(e){asyncGeneratorStep(a,t,o,c,s,"throw",e)}c(void 0)})}}Object.defineProperty(exports, "__esModule", ({value:!0})),exports.default=void 0;var DEBUG=!1,API_KEY=null,LANGUAGE="en",REGION=null,LOCATION_TYPE=null,GOOGLE_API="https://maps.googleapis.com/maps/api/geocode/json";function log(e){var r=arguments.length>1&&void 0!==arguments[1]&&arguments[1];DEBUG&&(r?console.warn(e):console.log(e))}function handleUrl(e){return _handleUrl.apply(this,arguments)}function _handleUrl(){return(_handleUrl=_asyncToGenerator(regeneratorRuntime.mark(function e(r){var n,t;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,fetch(r).catch(function(){return Promise.reject(new Error("Error fetching data"))});case 2:return n=e.sent,e.next=5,n.json().catch(function(){return log("Error parsing server response"),Promise.reject(new Error("Error parsing server response"))});case 5:if("OK"!==(t=e.sent).status){e.next=9;break}return log(t),e.abrupt("return",t);case 9:return log("".concat(t.error_message,".\nServer returned status code ").concat(t.status),!0),e.abrupt("return",Promise.reject(new Error("".concat(t.error_message,".\nServer returned status code ").concat(t.status))));case 11:case"end":return e.stop()}},e)}))).apply(this,arguments)}var _default={setApiKey:function(apiKey){API_KEY=apiKey},setLanguage:function(language){LANGUAGE=language},setRegion:function(region){REGION=region},setLocationType:function(locationType){LOCATION_TYPE=locationType},enableDebug:function(){var e=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];DEBUG=e},fromLatLng:function(lat,lng,apiKey,language,region,locationType){return _asyncToGenerator(regeneratorRuntime.mark(function a(){var c,s;return regeneratorRuntime.wrap(function(a){for(;;)switch(a.prev=a.next){case 0:if(lat&&lng){a.next=3;break}return log("Provided coordinates are invalid",!0),a.abrupt("return",Promise.reject(new Error("Provided coordinates are invalid")));case 3:return c="".concat(lat,",").concat(lng),s="".concat(GOOGLE_API,"?latlng=").concat(encodeURIComponent(c)),(apiKey||API_KEY)&&(s+="&key=".concat(API_KEY=apiKey||API_KEY)),(language||LANGUAGE)&&(s+="&language=".concat(LANGUAGE=language||LANGUAGE)),(region||REGION)&&(REGION=region||REGION,s+="&region=".concat(encodeURIComponent(REGION))),(locationType||LOCATION_TYPE)&&(LOCATION_TYPE=locationType||LOCATION_TYPE,s+="&location_type=".concat(encodeURIComponent(LOCATION_TYPE))),a.abrupt("return",handleUrl(s));case 9:case"end":return a.stop()}},a)}))()},fromAddress:function(address,apiKey,language,region){return _asyncToGenerator(regeneratorRuntime.mark(function o(){var a;return regeneratorRuntime.wrap(function(o){for(;;)switch(o.prev=o.next){case 0:if(address){o.next=3;break}return log("Provided address is invalid",!0),o.abrupt("return",Promise.reject(new Error("Provided address is invalid")));case 3:return a="".concat(GOOGLE_API,"?address=").concat(encodeURIComponent(address)),(apiKey||API_KEY)&&(a+="&key=".concat(API_KEY=apiKey||API_KEY)),(language||LANGUAGE)&&(a+="&language=".concat(LANGUAGE=language||LANGUAGE)),(region||REGION)&&(REGION=region||REGION,a+="&region=".concat(encodeURIComponent(REGION))),o.abrupt("return",handleUrl(a));case 8:case"end":return o.stop()}},o)}))()}};exports.default=_default;
+
+/***/ }),
+
+/***/ "./node_modules/react-google-autocomplete/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-google-autocomplete/index.js ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+module.exports = __webpack_require__(/*! ./lib */ "./node_modules/react-google-autocomplete/lib/index.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/react-google-autocomplete/lib/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-google-autocomplete/lib/index.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.ReactCustomGoogleAutocomplete = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ReactGoogleAutocomplete = function (_React$Component) {
+  _inherits(ReactGoogleAutocomplete, _React$Component);
+
+  function ReactGoogleAutocomplete(props) {
+    _classCallCheck(this, ReactGoogleAutocomplete);
+
+    var _this = _possibleConstructorReturn(this, (ReactGoogleAutocomplete.__proto__ || Object.getPrototypeOf(ReactGoogleAutocomplete)).call(this, props));
+
+    _this.handleLoadScript = function () {
+      var googleMapsScriptUrl = 'https://maps.googleapis.com/maps/api/js?key=' + _this.props.apiKey + '&libraries=places';
+
+      // Check if script exists already
+      if (document.querySelectorAll('script[src="' + googleMapsScriptUrl + '"]').length > 0) {
+        return Promise.resolve();
+      }
+
+      _this.googleMapsScript = document.createElement('script');
+      _this.googleMapsScript.src = googleMapsScriptUrl;
+
+      document.body.appendChild(_this.googleMapsScript);
+
+      return new Promise(function (resolve) {
+        _this.googleMapsScript.addEventListener('load', function () {
+          return resolve();
+        });
+      });
+    };
+
+    _this.autocomplete = null;
+    _this.event = null;
+    return _this;
+  }
+
+  _createClass(ReactGoogleAutocomplete, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      // TODO: only take options as configuration object, remove config props from the components props.
+      var _props = this.props,
+          _props$types = _props.types,
+          types = _props$types === undefined ? ['(cities)'] : _props$types,
+          componentRestrictions = _props.componentRestrictions,
+          bounds = _props.bounds,
+          apiKey = _props.apiKey,
+          _props$fields = _props.fields,
+          fields = _props$fields === undefined ? ['address_components', 'geometry.location', 'place_id', 'formatted_address'] : _props$fields,
+          _props$options = _props.options,
+          options = _props$options === undefined ? {} : _props$options;
+
+      var config = _extends({}, options, {
+        types: types,
+        bounds: bounds,
+        fields: fields
+      });
+
+      if (componentRestrictions) {
+        config.componentRestrictions = componentRestrictions;
+      }
+
+      this.disableAutofill();
+
+      var handleAutoComplete = function handleAutoComplete() {
+        _this2.autocomplete = new google.maps.places.Autocomplete(_this2.refs.input, config);
+
+        _this2.event = _this2.autocomplete.addListener('place_changed', _this2.onSelected.bind(_this2));
+      };
+
+      if (apiKey) {
+        this.handleLoadScript().then(function () {
+          return handleAutoComplete();
+        });
+      } else {
+        handleAutoComplete();
+      }
+    }
+  }, {
+    key: 'disableAutofill',
+    value: function disableAutofill() {
+      var _this3 = this;
+
+      // Autofill workaround adapted from https://stackoverflow.com/questions/29931712/chrome-autofill-covers-autocomplete-for-google-maps-api-v3/49161445#49161445
+      if (window.MutationObserver) {
+        var observerHack = new MutationObserver(function () {
+          observerHack.disconnect();
+          if (_this3.refs && _this3.refs.input) {
+            _this3.refs.input.autocomplete = _this3.props.inputAutocompleteValue || 'new-password';
+          }
+        });
+        observerHack.observe(this.refs.input, {
+          attributes: true,
+          attributeFilter: ['autocomplete']
+        });
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.event) this.event.remove();
+    }
+  }, {
+    key: 'onSelected',
+    value: function onSelected() {
+      if (this.props.onPlaceSelected && this.autocomplete) {
+        this.props.onPlaceSelected(this.autocomplete.getPlace(), this.refs.input);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props2 = this.props,
+          onPlaceSelected = _props2.onPlaceSelected,
+          types = _props2.types,
+          componentRestrictions = _props2.componentRestrictions,
+          bounds = _props2.bounds,
+          options = _props2.options,
+          apiKey = _props2.apiKey,
+          rest = _objectWithoutProperties(_props2, ['onPlaceSelected', 'types', 'componentRestrictions', 'bounds', 'options', 'apiKey']);
+
+      return _react2.default.createElement('input', _extends({ ref: 'input' }, rest));
+    }
+  }]);
+
+  return ReactGoogleAutocomplete;
+}(_react2.default.Component);
+
+ReactGoogleAutocomplete.propTypes = {
+  onPlaceSelected: _propTypes2.default.func,
+  types: _propTypes2.default.arrayOf(_propTypes2.default.string),
+  componentRestrictions: _propTypes2.default.object,
+  bounds: _propTypes2.default.object,
+  fields: _propTypes2.default.array,
+  inputAutocompleteValue: _propTypes2.default.string,
+  options: _propTypes2.default.shape({
+    componentRestrictions: _propTypes2.default.object,
+    bounds: _propTypes2.default.object,
+    location: _propTypes2.default.object,
+    offset: _propTypes2.default.number,
+    origin: _propTypes2.default.object,
+    radius: _propTypes2.default.number,
+    sessionToken: _propTypes2.default.object,
+    types: _propTypes2.default.arrayOf(_propTypes2.default.string)
+  }),
+  apiKey: _propTypes2.default.string
+};
+exports.default = ReactGoogleAutocomplete;
+
+var ReactCustomGoogleAutocomplete = exports.ReactCustomGoogleAutocomplete = function (_React$Component2) {
+  _inherits(ReactCustomGoogleAutocomplete, _React$Component2);
+
+  function ReactCustomGoogleAutocomplete(props) {
+    _classCallCheck(this, ReactCustomGoogleAutocomplete);
+
+    var _this4 = _possibleConstructorReturn(this, (ReactCustomGoogleAutocomplete.__proto__ || Object.getPrototypeOf(ReactCustomGoogleAutocomplete)).call(this, props));
+
+    _this4.service = new google.maps.places.AutocompleteService();
+    return _this4;
+  }
+
+  _createClass(ReactCustomGoogleAutocomplete, [{
+    key: 'onChange',
+    value: function onChange(e) {
+      var _this5 = this;
+
+      var _props$types2 = this.props.types,
+          types = _props$types2 === undefined ? ['(cities)'] : _props$types2;
+
+
+      if (e.target.value) {
+        this.service.getPlacePredictions({ input: e.target.value, types: types }, function (predictions, status) {
+          if (status === 'OK' && predictions && predictions.length > 0) {
+            _this5.props.onOpen(predictions);
+          } else {
+            _this5.props.onClose();
+          }
+        });
+      } else {
+        this.props.onClose();
+      }
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this6 = this;
+
+      if (this.props.input.value) {
+        this.placeService = new google.maps.places.PlacesService(this.refs.div);
+        this.placeService.getDetails({ placeId: this.props.input.value }, function (e, status) {
+          if (status === 'OK') {
+            _this6.refs.input.value = e.formatted_address;
+          }
+        });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this7 = this;
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.cloneElement(this.props.input, _extends({}, this.props, {
+          ref: 'input',
+          onChange: function onChange(e) {
+            _this7.onChange(e);
+          }
+        })),
+        _react2.default.createElement('div', { ref: 'div' })
+      );
+    }
+  }]);
+
+  return ReactCustomGoogleAutocomplete;
+}(_react2.default.Component);
+
+ReactCustomGoogleAutocomplete.propTypes = {
+  input: _propTypes2.default.node.isRequired,
+  onOpen: _propTypes2.default.func.isRequired,
+  onClose: _propTypes2.default.func.isRequired
+};
 
 /***/ }),
 

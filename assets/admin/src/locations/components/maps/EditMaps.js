@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
 import MapsAutoComplete from './MapsAutoComplete';
+import CreateMaps from './CreateMaps';
 
 export default class EditMaps extends React.Component {
 
@@ -15,9 +16,9 @@ export default class EditMaps extends React.Component {
 				<React.Fragment>
 			      <CssBaseline />
 			      <Container>
-			        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '72vh', width: '22vw' }}>
-			        	<TextField style={{width: '17vw' }} label="Location Title" defaultValue="Hello" />
-			        	<TextField style={{width: '17vw' }} label="Location coordinates" defaultValue="Lat Lng" />
+			        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '72vh', width: '16vw' }}>
+			        	<TextField style={{width: '15vw' }} label="Location Title" defaultValue="Hello" />
+			        	<TextField style={{width: '15vw' }} label="Location coordinates" defaultValue="Lat Lng" />
 			       	</Typography>	 
 			      </Container>
 			    </React.Fragment>
