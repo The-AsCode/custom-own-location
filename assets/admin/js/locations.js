@@ -16221,7 +16221,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       var MapWithAMarker = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withGoogleMap)(function (props) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
           style: style,
-          defaultZoom: 4,
+          defaultZoom: 5,
           defaultCenter: {
             lat: _this2.state.mapPosition.lat,
             lng: _this2.state.mapPosition.lng
@@ -16240,6 +16240,13 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
               })
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_autocomplete__WEBPACK_IMPORTED_MODULE_3__.default, {
+            style: {
+              width: '50%',
+              height: '40px',
+              paddingLeft: '16px',
+              marginTop: '2px',
+              marginBottom: '2rem'
+            },
             onPlaceSelected: _this2.onPlaceSelected,
             types: ['(regions)']
           })]
@@ -16365,13 +16372,13 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                 style: {
-                  width: '15vw'
+                  width: '16vw'
                 },
                 label: "Location Title",
-                defaultValue: "Hello"
+                defaultValue: "Location"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                 style: {
-                  width: '15vw'
+                  width: '16vw'
                 },
                 label: "Location coordinates",
                 defaultValue: "Lat Lng"

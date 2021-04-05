@@ -8,7 +8,6 @@ import Geocode from "react-geocode";
 import Autocomplete from 'react-google-autocomplete';
 import EditMaps from './EditMaps';
 
-
 Geocode.setApiKey("AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU");
 Geocode.enableDebug();
 
@@ -147,7 +146,7 @@ export default class CreateMaps extends React.Component {
 
           <GoogleMap
             style = {style}
-            defaultZoom={4}
+            defaultZoom={5}
             defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
           >
             <Marker
@@ -168,6 +167,13 @@ export default class CreateMaps extends React.Component {
             </Marker>
 
             <Autocomplete
+                style={{
+                    width: '50%',
+                    height: '40px',
+                    paddingLeft: '16px',
+                    marginTop: '2px',
+                    marginBottom: '2rem'
+                }}
                 onPlaceSelected={this.onPlaceSelected}
                 types={['(regions)']}
             />
