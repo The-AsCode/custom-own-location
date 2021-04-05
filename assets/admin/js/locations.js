@@ -16174,6 +16174,36 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "onPlaceSelected", function (place) {
+      console.log('plc', place);
+
+      var address = place.formatted_address,
+          addressArray = place.address_components,
+          city = _this.getCity(addressArray),
+          area = _this.getArea(addressArray),
+          state = _this.getState(addressArray),
+          latValue = place.geometry.location.lat(),
+          lngValue = place.geometry.location.lng();
+
+      console.log('latvalue', latValue);
+      console.log('lngValue', lngValue); // Set these values in the state.
+
+      _this.setState({
+        address: address ? address : '',
+        area: area ? area : '',
+        city: city ? city : '',
+        state: state ? state : '',
+        markerPosition: {
+          lat: latValue,
+          lng: lngValue
+        },
+        mapPosition: {
+          lat: latValue,
+          lng: lngValue
+        }
+      });
+    });
+
     return _this;
   }
 
@@ -16189,14 +16219,14 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
         width: isClicked == true ? '80%' : '100%'
       };
       var MapWithAMarker = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withGoogleMap)(function (props) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
           style: style,
           defaultZoom: 4,
           defaultCenter: {
             lat: _this2.state.mapPosition.lat,
             lng: _this2.state.mapPosition.lng
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.Marker, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.Marker, {
             position: {
               lat: _this2.state.markerPosition.lat,
               lng: _this2.state.markerPosition.lng
@@ -16209,7 +16239,10 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
                 children: ["Location: ", _this2.state.address, "Lat: ", _this2.state.mapPosition.lat, "Lng: ", _this2.state.mapPosition.lng]
               })
             })
-          })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_autocomplete__WEBPACK_IMPORTED_MODULE_3__.default, {
+            onPlaceSelected: _this2.onPlaceSelected,
+            types: ['(regions)']
+          })]
         });
       }));
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {

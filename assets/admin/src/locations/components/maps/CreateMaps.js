@@ -102,6 +102,36 @@ export default class CreateMaps extends React.Component {
     onMarkerClick = () => {
         this.setState({isClicked: true});
     }
+
+    onPlaceSelected = (place) => {
+        console.log('plc', place);
+        const address = place.formatted_address,
+            addressArray = place.address_components,
+            city = this.getCity(addressArray),
+            area = this.getArea(addressArray),
+            state = this.getState(addressArray),
+            latValue = place.geometry.location.lat(),
+            lngValue = place.geometry.location.lng();
+
+        console.log('latvalue', latValue)
+        console.log('lngValue', lngValue)
+
+        // Set these values in the state.
+        this.setState({
+            address: (address) ? address : '',
+            area: (area) ? area : '',
+            city: (city) ? city : '',
+            state: (state) ? state : '',
+            markerPosition: {
+                lat: latValue,
+                lng: lngValue
+            },
+            mapPosition: {
+                lat: latValue,
+                lng: lngValue
+            },
+        })
+    };
     
     render() {
 
@@ -114,6 +144,7 @@ export default class CreateMaps extends React.Component {
         }
 
         const MapWithAMarker = withScriptjs(withGoogleMap(props =>
+
           <GoogleMap
             style = {style}
             defaultZoom={4}
@@ -135,6 +166,11 @@ export default class CreateMaps extends React.Component {
                 </InfoWindow>
 
             </Marker>
+
+            <Autocomplete
+                onPlaceSelected={this.onPlaceSelected}
+                types={['(regions)']}
+            />
 
           </GoogleMap>
         ));
