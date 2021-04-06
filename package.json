@@ -38,8 +38,10 @@
     "react-google-maps": "^9.4.5",
     "react-google-places-autocomplete": "^3.3.0",
     "react-places-autocomplete": "^7.3.0",
+    "react-redux": "^7.2.3",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5"
   },
   "babel": {
     "presets": [

@@ -12,25 +12,61 @@ Geocode.setApiKey("AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU");
 Geocode.enableDebug();
 
 export default class CreateMaps extends React.Component {
-    
-    state = {
-        address: '',
-        city: '',
-        area: '',
-        state: '',
-        zoom: 40,
-        height: 400,
-        mapPosition: {
-            lat: 0,
-            lng: 0,
-        },
-        markerPosition: {
-            lat: 0,
-            lng: 0,
-        },
+    constructor(props) {
+    super(props);
+        this.state = {
+            address: '',
+            city: '',
+            area: '',
+            state: '',
+            zoom: 40,
+            height: 400,
+            mapPosition: {
+                lat: 0,
+                lng: 0,
+            },
+            markerPosition: {
+                lat: 0,
+                lng: 0,
+            },
 
-        isClicked : false
+            isClicked : false
+        }
     }
+
+    componentDidMount() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                this.setState({
+                    mapPosition: {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    },
+                    markerPosition: {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    }
+                },() => {
+                    Geocode.fromLatLng(position.coords.latitude, position.coords.longitude)
+                    .then(response => {
+                        console.log(response)
+                        const address = response.results[0].formatted_address,
+                        addressArray = response.results[0].address_components,
+                            city = this.getCity(addressArray),
+                            area = this.getArea(addressArray),
+                            state = this.getState(addressArray);
+                        this.setState({
+                            address: (address) ? address : '',
+                            area: (area) ? area : '',
+                            city: (city) ? city : '',
+                            state: (state) ? state : '',
+                        })
+                    });
+
+                })
+            });
+        }
+    };
 
     getCity = (addressArray) => {
         let city = '';

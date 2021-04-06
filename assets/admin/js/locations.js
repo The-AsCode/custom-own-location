@@ -16073,34 +16073,12 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(CreateMaps);
 
-  function CreateMaps() {
+  function CreateMaps(props) {
     var _this;
 
     _classCallCheck(this, CreateMaps);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      address: '',
-      city: '',
-      area: '',
-      state: '',
-      zoom: 40,
-      height: 400,
-      mapPosition: {
-        lat: 0,
-        lng: 0
-      },
-      markerPosition: {
-        lat: 0,
-        lng: 0
-      },
-      isClicked: false
-    });
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "getCity", function (addressArray) {
       var city = '';
@@ -16204,13 +16182,67 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _this.state = {
+      address: '',
+      city: '',
+      area: '',
+      state: '',
+      zoom: 40,
+      height: 400,
+      mapPosition: {
+        lat: 0,
+        lng: 0
+      },
+      markerPosition: {
+        lat: 0,
+        lng: 0
+      },
+      isClicked: false
+    };
     return _this;
   }
 
   _createClass(CreateMaps, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          _this2.setState({
+            mapPosition: {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            },
+            markerPosition: {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+          }, function () {
+            react_geocode__WEBPACK_IMPORTED_MODULE_2__.default.fromLatLng(position.coords.latitude, position.coords.longitude).then(function (response) {
+              console.log(response);
+
+              var address = response.results[0].formatted_address,
+                  addressArray = response.results[0].address_components,
+                  city = _this2.getCity(addressArray),
+                  area = _this2.getArea(addressArray),
+                  state = _this2.getState(addressArray);
+
+              _this2.setState({
+                address: address ? address : '',
+                area: area ? area : '',
+                city: city ? city : '',
+                state: state ? state : ''
+              });
+            });
+          });
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var isClicked = this.state.isClicked;
       var mapInfo = isClicked ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_EditMaps__WEBPACK_IMPORTED_MODULE_4__.default, {}) : " ";
@@ -16223,20 +16255,20 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
           style: style,
           defaultZoom: 5,
           defaultCenter: {
-            lat: _this2.state.mapPosition.lat,
-            lng: _this2.state.mapPosition.lng
+            lat: _this3.state.mapPosition.lat,
+            lng: _this3.state.mapPosition.lng
           },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.Marker, {
             position: {
-              lat: _this2.state.markerPosition.lat,
-              lng: _this2.state.markerPosition.lng
+              lat: _this3.state.markerPosition.lat,
+              lng: _this3.state.markerPosition.lng
             },
             draggable: true,
-            onDragEnd: _this2.onMarkerDragEnd,
-            onClick: _this2.onMarkerClick,
+            onDragEnd: _this3.onMarkerDragEnd,
+            onClick: _this3.onMarkerClick,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.InfoWindow, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                children: ["Location: ", _this2.state.address, "Lat: ", _this2.state.mapPosition.lat, "Lng: ", _this2.state.mapPosition.lng]
+                children: ["Location: ", _this3.state.address, "Lat: ", _this3.state.mapPosition.lat, "Lng: ", _this3.state.mapPosition.lng]
               })
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_autocomplete__WEBPACK_IMPORTED_MODULE_3__.default, {
@@ -16247,7 +16279,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
               marginTop: '2px',
               marginBottom: '2rem'
             },
-            onPlaceSelected: _this2.onPlaceSelected,
+            onPlaceSelected: _this3.onPlaceSelected,
             types: ['(regions)']
           })]
         });
