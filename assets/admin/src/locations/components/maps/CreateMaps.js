@@ -175,8 +175,20 @@ export default class CreateMaps extends React.Component {
 
         let style = { 
           height: '100%',
-          width: isClicked == true ? '80%' : '100%',
+          width: isClicked == true ? '82%' : '100%',
         }
+
+        const LocationSearch = withScriptjs(withGoogleMap(props =>
+            <Autocomplete
+                style={{
+                    width: '40%',
+                    height: '40px',
+                    position: 'absolute',
+                }}
+                onPlaceSelected={this.onPlaceSelected}
+                types={['(regions)']}
+            />
+        ));
 
         const MapWithAMarker = withScriptjs(withGoogleMap(props =>
 
@@ -192,42 +204,35 @@ export default class CreateMaps extends React.Component {
               onClick={this.onMarkerClick}
             >
 
-                <InfoWindow>
-                    <div>
-                        Location: {this.state.address}
-                        Lat: {this.state.mapPosition.lat}
-                        Lng: {this.state.mapPosition.lng}
-                    </div>
-                </InfoWindow>
+            <InfoWindow>
+                <div>
+                    Location: {this.state.address}
+                    Lat: {this.state.mapPosition.lat}
+                    Lng: {this.state.mapPosition.lng}
+                </div>
+            </InfoWindow>
 
             </Marker>
-
-            <Autocomplete
-                style={{
-                    width: '50%',
-                    height: '40px',
-                    paddingLeft: '16px',
-                    marginTop: '2px',
-                    marginBottom: '2rem'
-                }}
-                onPlaceSelected={this.onPlaceSelected}
-                types={['(regions)']}
-            />
-
           </GoogleMap>
         ));
 
         return (
             <div style = {{width: '85vw', height: '0vh'}}>
                 <div style={style}>
+                    <LocationSearch
+                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places"
+                        loadingElement={<div style={{ height: '10%' }} />}
+                        containerElement={<div style={{ height: '',}} />}
+                        mapElement={<div style={{ height: '10%' }} />}
+                    />
                     <MapWithAMarker
                       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places"
-                      loadingElement={<div style={{ height: `100%` }} />}
-                      containerElement={<div style={{ height: `300px` }} />}
-                      mapElement={<div style={{ height: `100%` }} />}
+                      loadingElement={<div style={{ height: '100%' }} />}
+                      containerElement={<div style={{ height: '300px'}} />}
+                      mapElement={<div style={{ height: '100%' }} />}
                     />
                 </div>
-                <div style={{marginLeft:"78.5%"}} >
+                <div style={{marginLeft:"80%"}} >
                     {mapInfo}
                 </div>
             </div>
