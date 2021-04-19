@@ -16417,12 +16417,6 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
                 },
                 label: "Location coordinates",
                 defaultValue: "Lat Lng"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
-                style: {
-                  width: '15.5vw'
-                },
-                label: "Shortcode",
-                defaultValue: "Shortcode"
               })]
             })
           })]
