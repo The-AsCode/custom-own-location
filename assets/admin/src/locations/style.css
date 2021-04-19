@@ -9,3 +9,11 @@
    	position: absolute;
    	z-index: 1;
 }
+
+.marker-container {
+	padding-top: 10px;
+}
+.marker-color-container{
+	padding-top: 10px;
+	float: left;
+}

@@ -7,6 +7,7 @@ import { withGoogleMap,
 import Geocode from "react-geocode";
 import Autocomplete from 'react-google-autocomplete';
 import EditMaps from './EditMaps';
+import MarkersIcon from './Markers';
 
 Geocode.setApiKey("AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU");
 Geocode.enableDebug();
@@ -218,6 +219,7 @@ export default class CreateMaps extends React.Component {
                       containerElement={<div style={{ height: '300px'}} />}
                       mapElement={<div style={{ height: '100%' }} />}
                     />
+                    <MarkersIcon/>
                 </div>
                 <div style={{marginLeft:"80%"}} >
                     <EditMaps/>
