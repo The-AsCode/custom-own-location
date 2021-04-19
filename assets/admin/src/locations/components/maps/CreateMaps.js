@@ -28,9 +28,7 @@ export default class CreateMaps extends React.Component {
             markerPosition: {
                 lat: 0,
                 lng: 0,
-            },
-
-            isClicked : false
+            }
         }
     }
 
@@ -134,10 +132,6 @@ export default class CreateMaps extends React.Component {
         })
     }
 
-    onMarkerClick = () => {
-        this.setState({isClicked: true});
-    }
-
     onPlaceSelected = (place) => {
         console.log('plc', place);
         const address = place.formatted_address,
@@ -161,7 +155,7 @@ export default class CreateMaps extends React.Component {
                 lat: latValue,
                 lng: lngValue
             },
-            mapPosition: {
+            mapPosition: {  
                 lat: latValue,
                 lng: lngValue
             },
@@ -170,21 +164,13 @@ export default class CreateMaps extends React.Component {
     
     render() {
 
-        const {isClicked} = this.state
-        let mapInfo = isClicked ? <EditMaps/> : " "
-
         let style = { 
           height: '100%',
-          width: isClicked == true ? '82%' : '100%',
+          width: '82%'
         }
 
         const LocationSearch = withScriptjs(withGoogleMap(props =>
             <Autocomplete
-                style={{
-                    width: '40%',
-                    height: '40px',
-                    position: 'absolute',
-                }}
                 onPlaceSelected={this.onPlaceSelected}
                 types={['(regions)']}
             />
@@ -195,6 +181,7 @@ export default class CreateMaps extends React.Component {
           <GoogleMap
             style = {style}
             defaultZoom={5}
+            mapTypeControl = {false}
             defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
           >
             <Marker
@@ -233,7 +220,7 @@ export default class CreateMaps extends React.Component {
                     />
                 </div>
                 <div style={{marginLeft:"80%"}} >
-                    {mapInfo}
+                    <EditMaps/>
                 </div>
             </div>
         )

@@ -15,7 +15,7 @@ export default class EditMaps extends React.Component {
 				<React.Fragment>
 			      <CssBaseline />
 			      <Container>
-			        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '72vh', width: '15.5vw' }}>
+			        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '80vh', width: '15.5vw' }}>
 			        	<TextField style={{width: '15.5vw'}} label="Location Title" defaultValue="Location" />
 			        	<TextField style={{width: '15.5vw'}} label="Location coordinates" defaultValue="Lat Lng" />
 			       	</Typography>	 

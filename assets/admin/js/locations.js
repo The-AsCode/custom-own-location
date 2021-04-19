@@ -16146,12 +16146,6 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       });
     });
 
-    _defineProperty(_assertThisInitialized(_this), "onMarkerClick", function () {
-      _this.setState({
-        isClicked: true
-      });
-    });
-
     _defineProperty(_assertThisInitialized(_this), "onPlaceSelected", function (place) {
       console.log('plc', place);
 
@@ -16196,8 +16190,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       markerPosition: {
         lat: 0,
         lng: 0
-      },
-      isClicked: false
+      }
     };
     return _this;
   }
@@ -16244,19 +16237,12 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      var isClicked = this.state.isClicked;
-      var mapInfo = isClicked ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_EditMaps__WEBPACK_IMPORTED_MODULE_4__.default, {}) : " ";
       var style = {
         height: '100%',
-        width: isClicked == true ? '82%' : '100%'
+        width: '82%'
       };
       var LocationSearch = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withGoogleMap)(function (props) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_autocomplete__WEBPACK_IMPORTED_MODULE_3__.default, {
-          style: {
-            width: '40%',
-            height: '40px',
-            position: 'absolute'
-          },
           onPlaceSelected: _this3.onPlaceSelected,
           types: ['(regions)']
         });
@@ -16265,6 +16251,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
           style: style,
           defaultZoom: 5,
+          mapTypeControl: false,
           defaultCenter: {
             lat: _this3.state.mapPosition.lat,
             lng: _this3.state.mapPosition.lng
@@ -16331,7 +16318,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
           style: {
             marginLeft: "80%"
           },
-          children: mapInfo
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_EditMaps__WEBPACK_IMPORTED_MODULE_4__.default, {})
         })]
       });
     }
@@ -16415,7 +16402,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
               component: "div",
               style: {
                 backgroundColor: '#cfe8fc',
-                height: '72vh',
+                height: '80vh',
                 width: '15.5vw'
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
@@ -18980,7 +18967,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 10px;\n}\n\n.pac-target-input {\n\twidth: 40%;\n    height: 40px;\n   \tposition: absolute;\n\tz-index: 1;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 10px;\n}\n\n.pac-target-input {\n\twidth: 40%;\n    height: 40px;\n   \tposition: absolute;\n   \tz-index: 1;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
