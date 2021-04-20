@@ -39,10 +39,10 @@ class Menu {
 		add_submenu_page(
 			$parent_slug,
 			'Custom Own Locations',
-			'Settings',
+			'API Settings',
 			$capabilty,
 			'col-api-setting',
-			[$this, 'api_setting_page']
+			[$this, 'col_api_setting_page']
 		);
 	}
 
@@ -53,8 +53,15 @@ class Menu {
 		echo '<div id="col-dashboard-page-app"></div>';
 	}
 
-	public function api_setting_page(){
-		echo 'Hello';
+	public function col_api_setting_page() {
+
+	echo '<div style="font-size:15px; padding-top:5px;">
+			<form>
+			  <label for="api">Your API Key:</label>
+			  <input type="text" id="api" name="api">
+			  <input type="submit" value="Submit">
+			</form>
+		 </div>';
 	}
 
 }
