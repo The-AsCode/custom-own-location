@@ -59,7 +59,7 @@ class Menu {
 			<form>
 			  <label for="api">Your API Key:</label>
 			  <input type="text" id="api" name="api">
-			  <input type="submit" value="Submit">
+			  <input type="submit" value="Save">
 			</form>
 		 </div>';
 	}

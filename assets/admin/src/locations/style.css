@@ -9,15 +9,6 @@
    	position: absolute;
    	z-index: 1;
 }
-
-.marker-container {
-	padding-top: 10px;
-}
-.marker-color-container{
-	padding-top: 10px;
-	float: left;
-}
-
 .save-btn {
 	padding-top: 3px;
 	padding-left: 9rem;
@@ -26,6 +17,17 @@
 .edit-container-style {
 	padding-top: 5px;
 }
-.api-key-input{
-	padding-top:20px; 
+
+.main-marker-container{
+	display: flex;
+}
+
+.marker-color-container {
+	padding-top: 10px;
+	color: gray;
+}
+
+.marker-container {
+	padding-top: 10px;
+	color: red;
 }

@@ -16410,14 +16410,14 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
                 width: '15.5vw'
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                "class": "save-btn",
+                className: "save-btn",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__.default, {
                   variant: "contained",
                   color: "primary",
                   children: " Save "
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                "class": "edit-container-style",
+                className: "edit-container-style",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                   style: {
                     width: '15.5vw'
@@ -16426,7 +16426,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
                   defaultValue: "Location"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                "class": "edit-container-style",
+                className: "edit-container-style",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                   style: {
                     width: '15.5vw'
@@ -16435,7 +16435,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
                   defaultValue: "Lat Lng"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                "class": "edit-container-style",
+                className: "edit-container-style",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_7__.default, {
                   style: {
                     width: '15.5vw'
@@ -16516,29 +16516,31 @@ var Markers = /*#__PURE__*/function (_React$Component) {
   _createClass(Markers, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__.default, {
-          "class": "marker-color-container",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__.default, {
-            style: {
-              backgroundColor: '#cfe8fc',
-              height: '15vh',
-              width: '34vw'
-            },
-            children: "Marker Color"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__.default, {
-          "class": "marker-container",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__.default, {
-            style: {
-              backgroundColor: '#cfe8fc',
-              height: '15vh',
-              width: '34vw',
-              marginLeft: "50%"
-            },
-            children: "Marker container"
-          })
-        })]
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "main-marker-container",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__.default, {
+            className: "marker-color-container",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__.default, {
+              style: {
+                backgroundColor: '#cfe8fc',
+                height: '15vh',
+                width: '32vw'
+              },
+              children: "Marker Color"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__.default, {
+            className: "marker-container",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__.default, {
+              style: {
+                backgroundColor: '#cfe8fc',
+                height: '15vh',
+                width: '32vw'
+              },
+              children: "Marker"
+            })
+          })]
+        })
       });
     }
   }]);
@@ -19085,7 +19087,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 10px;\n}\n\n.pac-target-input {\n\twidth: 40%;\n    height: 40px;\n   \tposition: absolute;\n   \tz-index: 1;\n}\n\n.marker-container {\n\tpadding-top: 10px;\n}\n.marker-color-container{\n\tpadding-top: 10px;\n\tfloat: left;\n}\n\n.save-btn {\n\tpadding-top: 3px;\n\tpadding-left: 9rem;\n}\n\n.edit-container-style {\n\tpadding-top: 5px;\n}\n.api-key-input{\n\tpadding-top:20px; \n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 10px;\n}\n\n.pac-target-input {\n\twidth: 40%;\n    height: 40px;\n   \tposition: absolute;\n   \tz-index: 1;\n}\n.save-btn {\n\tpadding-top: 3px;\n\tpadding-left: 9rem;\n}\n\n.edit-container-style {\n\tpadding-top: 5px;\n}\n\n.main-marker-container{\n\tdisplay: flex;\n}\n\n.marker-color-container {\n\tpadding-top: 10px;\n\tcolor: gray;\n}\n\n.marker-container {\n\tpadding-top: 10px;\n\tcolor: red;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

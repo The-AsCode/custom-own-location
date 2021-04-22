@@ -6,19 +6,21 @@ import Container from '@material-ui/core/Container';
 export default class Markers extends React.Component {
 	render() {
 		return (
-			<React.Fragment>
-				<Container class="marker-color-container">
-					<Typography style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'34vw'}}>
-						Marker Color
-					</Typography>
-				</Container>
+			<div className="main-marker-container">
+				<React.Fragment>
+					<Container className="marker-color-container">
+						<Typography style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'32vw'}}>
+							Marker Color
+						</Typography>
+					</Container>
 
-				<Container class="marker-container">
-					<Typography style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'34vw', marginLeft:"50%" }}>
-						Marker container
-					</Typography>
-				</Container>
-			</React.Fragment>
+					<Container className="marker-container">
+						<Typography style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'32vw'}}>
+							Marker
+						</Typography>
+					</Container>
+				</React.Fragment>
+			</div>
 		)
 	}
 }
