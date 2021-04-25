@@ -170,6 +170,24 @@ export default class CreateMaps extends React.Component {
           width: '82%'
         }
 
+        let mapOptions = {
+          scrollwheel: true,
+          zoomControlOptions: {
+              //   position: 'RIGHT_CENTER',    // as long as this is not set it works
+              style: 'SMALL'
+          },
+          mapTypeControlOptions: {
+              position: 'BOTTOM_LEFT'     // this makes the map type control disappear
+          },
+          draggable: true,
+          rotateControl: true,
+          scaleControl: true,
+          streetViewControl: {
+            position: 'BOTTOM_LEFT' 
+          },
+          panControl: true,
+        };
+
         const LocationSearch = withScriptjs(withGoogleMap(props =>
             <Autocomplete
                 onPlaceSelected={this.onPlaceSelected}
@@ -181,8 +199,8 @@ export default class CreateMaps extends React.Component {
 
           <GoogleMap
             style = {style}
-            defaultZoom={5}
-            mapTypeControl = {false}
+            options={mapOptions}
+            defaultZoom={6}
             defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
           >
             <Marker

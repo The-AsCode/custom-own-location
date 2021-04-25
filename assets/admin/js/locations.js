@@ -16243,6 +16243,24 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
         height: '100%',
         width: '82%'
       };
+      var mapOptions = {
+        scrollwheel: true,
+        zoomControlOptions: {
+          //   position: 'RIGHT_CENTER',    // as long as this is not set it works
+          style: 'SMALL'
+        },
+        mapTypeControlOptions: {
+          position: 'BOTTOM_LEFT' // this makes the map type control disappear
+
+        },
+        draggable: true,
+        rotateControl: true,
+        scaleControl: true,
+        streetViewControl: {
+          position: 'BOTTOM_LEFT'
+        },
+        panControl: true
+      };
       var LocationSearch = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withGoogleMap)(function (props) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_google_autocomplete__WEBPACK_IMPORTED_MODULE_3__.default, {
           onPlaceSelected: _this3.onPlaceSelected,
@@ -16252,8 +16270,8 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       var MapWithAMarker = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_1__.withGoogleMap)(function (props) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_1__.GoogleMap, {
           style: style,
-          defaultZoom: 5,
-          mapTypeControl: false,
+          options: mapOptions,
+          defaultZoom: 6,
           defaultCenter: {
             lat: _this3.state.mapPosition.lat,
             lng: _this3.state.mapPosition.lng
