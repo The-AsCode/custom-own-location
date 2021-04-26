@@ -1,0 +1,1 @@
+export const UPDATE_MAP_FORM_DATA = "UPDATE_MAP_FORM_DATA";

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import { withGoogleMap, 
     GoogleMap, 
     withScriptjs, 
@@ -9,10 +10,12 @@ import Autocomplete from 'react-google-autocomplete';
 import EditMaps from './EditMaps';
 import MarkersIcon from './Markers';
 
+import { updateMapFormFields } from '../../store/actions.js';
+
 Geocode.setApiKey("AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU");
 Geocode.enableDebug();
 
-export default class CreateMaps extends React.Component {
+class CreateMaps extends React.Component {
     constructor(props) {
     super(props);
         this.state = {
@@ -107,7 +110,6 @@ export default class CreateMaps extends React.Component {
         let newLat = event.latLng.lat();
         let newLng = event.latLng.lng();
 
-
         Geocode.fromLatLng(newLat,newLng)
         .then(response => {
             const address = response.results[0].formatted_address,
@@ -115,7 +117,7 @@ export default class CreateMaps extends React.Component {
                     city = this.getCity(addressArray),
                     area = this.getArea(addressArray),
                     state = this.getState(addressArray);
-            this.setState({
+            this.props.updateMapFormFields({
                 address: (address) ? address : '',
                 area: (area) ? area : '',
                 city: (city) ? city : '',
@@ -246,3 +248,8 @@ export default class CreateMaps extends React.Component {
         )
     }
 }
+
+export default connect(
+  null,
+  { updateMapFormFields }
+)(CreateMaps);

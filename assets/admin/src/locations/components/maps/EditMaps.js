@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -8,7 +9,12 @@ import Button from '@material-ui/core/Button';
 
 import CreateMaps from './CreateMaps';
 
-export default class EditMaps extends React.Component {
+class EditMaps extends React.Component {
+
+  getLatLng = () => {
+    return this.props.mapForm.markerPosition.lat + 
+          "," + this.props.mapForm.markerPosition.lng;
+  }
 
 	render() {
 		return (
@@ -24,7 +30,12 @@ export default class EditMaps extends React.Component {
 			        		<TextField style={{width: '15.5vw'}} label="Location Title" defaultValue="Location" />
 			        	</div>
 			        	<div className="edit-container-style">
-			        		<TextField style={{width: '15.5vw'}} label="Location coordinates" defaultValue="Lat Lng" />
+			        		<TextField 
+                    style={{width: '15.5vw'}} 
+                    label="Location coordinates" 
+                    placeholder="Lat Lng"
+                    value={this.getLatLng()}
+                  />
 			        	</div>
 			        	<div className="edit-container-style">
 			        		<TextField style={{width: '15.5vw'}} label="Shortcode" defaultValue="Shortcode" />
@@ -36,3 +47,9 @@ export default class EditMaps extends React.Component {
 		)
 	}
 }
+
+const mapStateToProps = state => ({
+  mapForm: state.mapForm
+});
+
+export default connect(mapStateToProps)(EditMaps);
