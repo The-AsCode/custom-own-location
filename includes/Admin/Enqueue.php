@@ -22,6 +22,10 @@ class Enqueue {
 			$filepath = COL_DIR_PATH . 'assets/admin/js/locations.js';
 			$fileurl  = COL_DIR_URL . 'assets/admin/js/locations.js';
 			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ), true );
+		}else {
+			$filepath = COL_DIR_PATH . 'assets/admin/js/settings.js';
+			$fileurl  = COL_DIR_URL . 'assets/admin/js/settings.js';
+			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ), true );
 		}
 
 	}

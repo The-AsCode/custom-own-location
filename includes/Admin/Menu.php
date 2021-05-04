@@ -54,14 +54,7 @@ class Menu {
 	}
 
 	public function col_api_setting_page() {
-
-	echo '<div style="font-size:15px; padding-top:5px;">
-			<form>
-			  <label for="api">Your API Key:</label>
-			  <input type="text" id="api" name="api">
-			  <input type="submit" value="Save">
-			</form>
-		 </div>';
+		echo '<div id="col-api-key-page"></div>';
 	}
 
 }
