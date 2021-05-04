@@ -215,7 +215,7 @@ class CreateMaps extends React.Component {
             <InfoWindow>
                 <div>
                     Location: {this.state.address}
-                    Lat: {this.state.mapPosition.lat}
+                    Lat: {this.state.markerPosition.lat}
                     Lng: {this.state.mapPosition.lng}
                 </div>
             </InfoWindow>

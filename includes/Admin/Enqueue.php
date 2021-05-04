@@ -17,13 +17,17 @@ class Enqueue {
 	 * @param $page
 	 */
 	public function admin_scripts( $page ) {
-
 		if ( 'toplevel_page_col_dashboard' === $page ) {
 			$filepath = COL_DIR_PATH . 'assets/admin/js/locations.js';
 			$fileurl  = COL_DIR_URL . 'assets/admin/js/locations.js';
 			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ), true );
 		}
 
+		else {
+			$filepaths = COL_DIR_PATH . 'assets/admin/js/settings.js';
+			$fileurls  = COL_DIR_URL . 'assets/admin/js/settings.js';
+			wp_enqueue_script( 'col_dashboard', $fileurls, [], filemtime( $filepaths), true );
+		}
 	}
 
 }
