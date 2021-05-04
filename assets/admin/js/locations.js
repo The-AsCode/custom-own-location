@@ -16290,7 +16290,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
             onClick: _this3.onMarkerClick,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_2__.InfoWindow, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                children: ["Location: ", _this3.state.address, "Lat: ", _this3.state.markerPosition.lat, "Lng: ", _this3.state.mapPosition.lng]
+                children: ["Location: ", _this3.state.address, "Lat: ", _this3.state.mapPosition.lat, "Lng: ", _this3.state.mapPosition.lng]
               })
             })
           })
@@ -16370,14 +16370,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/CssBaseline */ "./node_modules/@material-ui/core/esm/CssBaseline/CssBaseline.js");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
-/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Container */ "./node_modules/@material-ui/core/esm/Container/Container.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/CssBaseline */ "./node_modules/@material-ui/core/esm/CssBaseline/CssBaseline.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
+/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Container */ "./node_modules/@material-ui/core/esm/Container/Container.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
 /* harmony import */ var _CreateMaps__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateMaps */ "./assets/admin/src/locations/components/maps/CreateMaps.js");
-/* harmony import */ var _store_actions_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/actions.js */ "./assets/admin/src/locations/store/actions.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16414,69 +16413,61 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var EditMaps = /*#__PURE__*/function (_React$Component) {
   _inherits(EditMaps, _React$Component);
 
   var _super = _createSuper(EditMaps);
 
-  function EditMaps(props) {
+  function EditMaps() {
     var _this;
 
     _classCallCheck(this, EditMaps);
 
-    _this = _super.call(this, props);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "getLatLng", function () {
       return _this.props.mapForm.markerPosition.lat + "," + _this.props.mapForm.markerPosition.lng;
     });
 
-    _defineProperty(_assertThisInitialized(_this), "handleOnChange", function (event) {
-      _this.setState({
-        changedLat: event.target.value,
-        changedLng: event.target.value
-      });
-    });
-
-    _this.state = {
-      changedLat: ' ',
-      changedLng: ' '
-    };
     return _this;
   }
 
   _createClass(EditMaps, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_5__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_6__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7__.default, {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__.default, {
               component: "div",
               style: {
                 backgroundColor: '#cfe8fc',
                 height: '80vh',
                 width: '15.5vw'
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "save-btn",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7__.default, {
                   variant: "contained",
                   color: "primary",
                   children: " Save "
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "edit-container-style",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_8__.default, {
                   style: {
                     width: '15.5vw'
                   },
                   label: "Location Title",
-                  defaultValue: "Map Name"
+                  defaultValue: "Location"
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "edit-container-style",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_8__.default, {
                   style: {
                     width: '15.5vw'
                   },
@@ -16484,18 +16475,15 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
                   placeholder: "Lat Lng",
                   value: this.getLatLng()
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "edit-container-style",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_8__.default, {
                   style: {
                     width: '15.5vw'
                   },
                   label: "Shortcode",
-                  defaultValue: "Shortcode",
-                  onChange: this.handleOnChange
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                  children: this.state.changedLat
-                })]
+                  defaultValue: "Shortcode"
+                })
               })]
             })
           })]
@@ -16620,11 +16608,9 @@ var Markers = /*#__PURE__*/function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UPDATE_MAP_FORM_DATA": () => (/* binding */ UPDATE_MAP_FORM_DATA),
-/* harmony export */   "UPDATE_MAP_MARKER_DATA": () => (/* binding */ UPDATE_MAP_MARKER_DATA)
+/* harmony export */   "UPDATE_MAP_FORM_DATA": () => (/* binding */ UPDATE_MAP_FORM_DATA)
 /* harmony export */ });
 var UPDATE_MAP_FORM_DATA = "UPDATE_MAP_FORM_DATA";
-var UPDATE_MAP_MARKER_DATA = "UPDATE_MAP_MARKER_DATA";
 
 /***/ }),
 
@@ -16637,8 +16623,7 @@ var UPDATE_MAP_MARKER_DATA = "UPDATE_MAP_MARKER_DATA";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "updateMapFormFields": () => (/* binding */ updateMapFormFields),
-/* harmony export */   "updateMapMarker": () => (/* binding */ updateMapMarker)
+/* harmony export */   "updateMapFormFields": () => (/* binding */ updateMapFormFields)
 /* harmony export */ });
 /* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionTypes */ "./assets/admin/src/locations/store/actionTypes.js");
 
@@ -16646,12 +16631,6 @@ var updateMapFormFields = function updateMapFormFields(fields) {
   return {
     type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__.UPDATE_MAP_FORM_DATA,
     payload: fields
-  };
-};
-var updateMapMarker = function updateMapMarker(value) {
-  return {
-    type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__.UPDATE_MAP_MARKER_DATA,
-    payload: value
   };
 };
 

@@ -41,7 +41,7 @@ class Menu {
 			'Custom Own Locations',
 			'API Settings',
 			$capabilty,
-			'col_api_setting',
+			'col-api-setting',
 			[$this, 'col_api_setting_page']
 		);
 	}
@@ -54,6 +54,14 @@ class Menu {
 	}
 
 	public function col_api_setting_page() {
-		echo '<div id="col-key-input-page"></div>';
+
+	echo '<div style="font-size:15px; padding-top:5px;">
+			<form>
+			  <label for="api">Your API Key:</label>
+			  <input type="text" id="api" name="api">
+			  <input type="submit" value="Save">
+			</form>
+		 </div>';
 	}
+
 }

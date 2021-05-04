@@ -9,30 +9,11 @@ import Button from '@material-ui/core/Button';
 
 import CreateMaps from './CreateMaps';
 
-import { updateMapMarker } from '../../store/actions.js';
-
 class EditMaps extends React.Component {
 
   getLatLng = () => {
     return this.props.mapForm.markerPosition.lat + 
           "," + this.props.mapForm.markerPosition.lng;
-  }
-
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-       changedLat : ' ',
-       changedLng : ' '
-    }
-  }
-
-  handleOnChange =(event)=> {
-    this.setState({
-      changedLat : event.target.value,
-      changedLng : event.target.value
-    });
-
   }
 
 	render() {
@@ -46,19 +27,18 @@ class EditMaps extends React.Component {
 			        		<Button variant="contained" color="primary"> Save </Button>
 			        	</div>
 			        	<div className="edit-container-style">
-			        		<TextField style={{width: '15.5vw'}} label="Location Title" defaultValue="Map Name" />
+			        		<TextField style={{width: '15.5vw'}} label="Location Title" defaultValue="Location" />
 			        	</div>
 			        	<div className="edit-container-style">
 			        		<TextField 
-			                    style={{width: '15.5vw'}} 
-			                    label="Location coordinates" 
-			                    placeholder="Lat Lng"
-			                    value={this.getLatLng()}
-			                />
+                    style={{width: '15.5vw'}} 
+                    label="Location coordinates" 
+                    placeholder="Lat Lng"
+                    value={this.getLatLng()}
+                  />
 			        	</div>
 			        	<div className="edit-container-style">
-			        		<TextField style={{width: '15.5vw'}} label="Shortcode" defaultValue="Shortcode" onChange={this.handleOnChange} />
-                  <p>{this.state.changedLat}</p>
+			        		<TextField style={{width: '15.5vw'}} label="Shortcode" defaultValue="Shortcode" />
 			        	</div>
 			       	</Typography>	 
 			      </Container>
