@@ -1,3 +1,25 @@
-.api-key-form {
+.settings-heading {
+	font-size: 2em;
+	color: #1d2327;
+	padding-top: 20px;
+}
+
+.from-container{
+	border-radius: 1%;
 	padding-top: 10px;
+	padding-left: 20px;
+}
+.MuiContainer-root {
+	padding-left:350px !important;
+}
+
+#outlined-search {
+	padding-top: 10px;
+	width: 33.5vw;
+}
+.api-key-fld {
+	padding-top: 15px;
+}
+.save-btn {
+	padding-top: 3px;
 }
