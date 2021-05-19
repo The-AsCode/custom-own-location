@@ -14307,6 +14307,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -14321,10 +14323,34 @@ var ApiKeyFrom = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(ApiKeyFrom);
 
-  function ApiKeyFrom() {
+  function ApiKeyFrom(props) {
+    var _this;
+
     _classCallCheck(this, ApiKeyFrom);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "handleOnChange", function (e) {
+      _this.setState({
+        keyValue: e.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "submitFrom", function (event) {
+      event.preventDefault();
+      var data = {
+        'action': 'col_api_from_action',
+        'key': _this.state.keyValue
+      };
+      console.log(data);
+      jQuery.post(ajaxurl, data, function (response) {// alert('Got this from the server: ' + response);
+      });
+    });
+
+    _this.state = {
+      keyValue: ''
+    };
+    return _this;
   }
 
   _createClass(ApiKeyFrom, [{
@@ -14336,7 +14362,6 @@ var ApiKeyFrom = /*#__PURE__*/function (_React$Component) {
           children: "Settings"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__.default, {
-            className: "test",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__.default, {
               className: "from-container",
               component: "div",
@@ -14347,11 +14372,14 @@ var ApiKeyFrom = /*#__PURE__*/function (_React$Component) {
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
                 children: "Put your API key here"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("from", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+                method: "post",
+                onSubmit: this.submitFrom,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                   className: "api-key-fld",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
-                    id: "outlined-search",
+                    id: "key-fld-id",
+                    onChange: this.handleOnChange,
                     label: "API Key",
                     variant: "outlined"
                   })
@@ -14360,6 +14388,7 @@ var ApiKeyFrom = /*#__PURE__*/function (_React$Component) {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__.default, {
                     variant: "contained",
                     color: "primary",
+                    type: "submit",
                     children: " Save "
                   })
                 })]
@@ -14450,7 +14479,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".settings-heading {\n\tfont-size: 2em;\n\tcolor: #1d2327;\n\tpadding-top: 20px;\n}\n\n.from-container{\n\tborder-radius: 1%;\n\tpadding-top: 10px;\n\tpadding-left: 20px;\n}\n.MuiContainer-root {\n\tpadding-left:350px !important;\n}\n\n#outlined-search {\n\tpadding-top: 10px;\n\twidth: 33.5vw;\n}\n.api-key-fld {\n\tpadding-top: 15px;\n}\n.save-btn {\n\tpadding-top: 3px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".settings-heading {\n\tfont-size: 2em;\n\tcolor: #1d2327;\n\tpadding-top: 20px;\n}\n\n.from-container{\n\tborder-radius: 1%;\n\tpadding-top: 10px;\n\tpadding-left: 20px;\n}\n.MuiContainer-root {\n\tpadding-left:350px !important;\n}\n\n#key-fld-id {\n\tpadding-top: 10px;\n\twidth: 33.5vw;\n}\n.api-key-fld {\n\tpadding-top: 15px;\n}\n.save-btn {\n\tpadding-top: 3px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
