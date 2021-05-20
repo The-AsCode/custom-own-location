@@ -16,7 +16,7 @@ class Menu {
 	 */
 	public function admin_menu() {
 		$parent_slug = 'col_dashboard';
-		$capabilty = 'manage_options';
+		$capabilty   = 'manage_options';
 
 		add_menu_page(
 			'Custom Own Locations',
@@ -33,16 +33,16 @@ class Menu {
 			'Location',
 			$capabilty,
 			$parent_slug,
-			[$this, 'col_dashboard_page']
+			[ $this, 'col_dashboard_page' ]
 		);
 
 		add_submenu_page(
 			$parent_slug,
-			'Custom Own Locations',
-			'API Settings',
+			'Settings - Custom Own Locations',
+			'Settings',
 			$capabilty,
-			'col-api-setting',
-			[$this, 'col_api_setting_page']
+			'col_setting',
+			[ $this, 'col_api_setting_page' ]
 		);
 	}
 
