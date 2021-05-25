@@ -12,7 +12,13 @@ import MarkersIcon from './Markers';
 
 import { updateMapFormFields } from '../../store/actions.js';
 
-Geocode.setApiKey("AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU");
+const apiKey = colDeshboard.api_key;
+const googleMapURLWithKey= "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&v=3.exp&libraries=geometry,drawing,places";
+
+console.log(googleMapURLWithKey);
+console.log(apiKey);
+
+Geocode.setApiKey(apiKey);
 Geocode.enableDebug();
 
 class CreateMaps extends React.Component {
@@ -228,13 +234,13 @@ class CreateMaps extends React.Component {
             <div style = {{width: '85vw', height: '0vh'}}>
                 <div style={style}>
                     <LocationSearch
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places"
+                        googleMapURL= {googleMapURLWithKey}
                         loadingElement={<div style={{ height: '10%' }} />}
                         containerElement={<div style={{ height: '',}} />}
                         mapElement={<div style={{ height: '10%' }} />}
                     />
                     <MapWithAMarker
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRHZISVTwyzXpABRYNYDbKH5njW1PpLPU&v=3.exp&libraries=geometry,drawing,places"
+                      googleMapURL={googleMapURLWithKey}
                       loadingElement={<div style={{ height: '100%' }} />}
                       containerElement={<div style={{ height: '300px'}} />}
                       mapElement={<div style={{ height: '100%' }} />}

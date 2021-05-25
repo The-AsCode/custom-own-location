@@ -22,6 +22,9 @@ class Enqueue {
 			$filepath = COL_DIR_PATH . 'assets/admin/js/locations.js';
 			$fileurl  = COL_DIR_URL . 'assets/admin/js/locations.js';
 			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ), true );
+
+			wp_localize_script( 'col_dashboard', 'colDeshboard',  $this->dashboard_data() );
+
 		}
 
 		if ( 'col_page_col_setting' === $page ) {
@@ -44,4 +47,10 @@ class Enqueue {
 		];
 	}
 
+	private function dashboard_data() {
+		return [
+			'api_key' => get_option( 'col_map_api_key', null ),
+			'nonce'  => wp_create_nonce( 'col-settings' ),
+		];
+	}
 }
