@@ -51,6 +51,16 @@ class Enqueue {
 		return [
 			'api_key' => get_option( 'col_map_api_key', null ),
 			'nonce'  => wp_create_nonce( 'col-settings' ),
+			'icon_red_home' => COL_DIR_URL . 'assets/icons/red_home.png',
+			'icon_red_office' => COL_DIR_URL . 'assets/icons/red_office.png',
+			'icon_red_restaurant' => COL_DIR_URL . 'assets/icons/red_restaurant.png',
+			'icon_blue_home' => COL_DIR_URL . 'assets/icons/blue_home.png',
+			'icon_blue_office' => COL_DIR_URL . 'assets/icons/blue_office.png',
+			'icon_blue_restaurant' => COL_DIR_URL . 'assets/icons/blue_restaurant.png',
+			'icon_green_home' => COL_DIR_URL . 'assets/icons/green_home.png',
+			'icon_green_office' => COL_DIR_URL . 'assets/icons/green_office.png',
+			'icon_green_restaurant' => COL_DIR_URL . 'assets/icons/green_restaurant.png',
+
 		];
 	}
 }

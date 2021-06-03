@@ -12,11 +12,12 @@ import MarkersIcon from './Markers';
 
 import { updateMapFormFields } from '../../store/actions.js';
 
+//map API key 
 const apiKey = colDeshboard.api_key;
 const googleMapURLWithKey= "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&v=3.exp&libraries=geometry,drawing,places";
 
-console.log(googleMapURLWithKey);
-console.log(apiKey);
+//icon link
+//link willbe here 
 
 Geocode.setApiKey(apiKey);
 Geocode.enableDebug();
@@ -212,12 +213,17 @@ class CreateMaps extends React.Component {
             defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
           >
             <Marker
+              icon={{
+                  url: colDeshboard.icon_red_home,
+                  anchor: new google.maps.Point(23, 56),
+                  scaledSize: new google.maps.Size(45,56)
+              }}
               position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
               draggable={true}
               onDragEnd={this.onMarkerDragEnd}
               onClick={this.onMarkerClick}
             >
-
+            
             <InfoWindow>
                 <div>
                     Location: {this.state.address}

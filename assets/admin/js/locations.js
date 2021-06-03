@@ -16129,13 +16129,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+ //map API key 
 
 
 
 var apiKey = colDeshboard.api_key;
-var googleMapURLWithKey = "https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&v=3.exp&libraries=geometry,drawing,places";
-console.log(googleMapURLWithKey);
-console.log(apiKey);
+var googleMapURLWithKey = "https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&v=3.exp&libraries=geometry,drawing,places"; //icon link
+//link willbe here 
+
 react_geocode__WEBPACK_IMPORTED_MODULE_3__.default.setApiKey(apiKey);
 react_geocode__WEBPACK_IMPORTED_MODULE_3__.default.enableDebug();
 
@@ -16346,6 +16347,11 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
             lng: _this3.state.mapPosition.lng
           },
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_2__.Marker, {
+            icon: {
+              url: colDeshboard.icon_red_home,
+              anchor: new google.maps.Point(23, 56),
+              scaledSize: new google.maps.Size(45, 56)
+            },
             position: {
               lat: _this3.state.markerPosition.lat,
               lng: _this3.state.markerPosition.lng
@@ -16607,6 +16613,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -16620,9 +16628,55 @@ var Markers = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Markers);
 
   function Markers() {
+    var _this;
+
     _classCallCheck(this, Markers);
 
-    return _super.apply(this, arguments);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      iconType: {
+        home: colDeshboard.icon_red_home,
+        office: colDeshboard.icon_red_office,
+        restaurant: colDeshboard.icon_red_restaurant
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleRed", function () {
+      _this.setState({
+        iconType: {
+          home: colDeshboard.icon_red_home,
+          office: colDeshboard.icon_red_office,
+          restaurant: colDeshboard.icon_red_restaurant
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleGreen", function () {
+      _this.setState({
+        iconType: {
+          home: colDeshboard.icon_green_home,
+          office: colDeshboard.icon_green_office,
+          restaurant: colDeshboard.icon_green_restaurant
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleBlue", function () {
+      _this.setState({
+        iconType: {
+          home: colDeshboard.icon_blue_home,
+          office: colDeshboard.icon_blue_office,
+          restaurant: colDeshboard.icon_blue_restaurant
+        }
+      });
+    });
+
+    return _this;
   }
 
   _createClass(Markers, [{
@@ -16639,17 +16693,40 @@ var Markers = /*#__PURE__*/function (_React$Component) {
                 height: '15vh',
                 width: '32vw'
               },
-              children: "Marker Color"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  onClick: this.handleRed,
+                  children: "Red"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  onClick: this.handleGreen,
+                  children: "Green"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  onClick: this.handleBlue,
+                  children: "Blue"
+                })]
+              })
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2__.default, {
             className: "marker-container",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__.default, {
               style: {
                 backgroundColor: '#cfe8fc',
                 height: '15vh',
                 width: '32vw'
               },
-              children: "Marker"
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                src: this.state.iconType.home,
+                height: 56,
+                width: 45
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                src: this.state.iconType.office,
+                height: 56,
+                width: 45
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                src: this.state.iconType.restaurant,
+                height: 56,
+                width: 45
+              })]
             })
           })]
         })
@@ -19309,7 +19386,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\r\n\tpadding-right: 20px;\r\n\tpadding-top: 10px;\r\n}\r\n\r\n.pac-target-input {\r\n\twidth: 40%;\r\n    height: 40px;\r\n   \tposition: absolute;\r\n   \tz-index: 1;\r\n}\r\n.save-btn {\r\n\tpadding-top: 3px;\r\n\tpadding-left: 9rem;\r\n}\r\n\r\n.edit-container-style {\r\n\tpadding-top: 5px;\r\n}\r\n\r\n.main-marker-container{\r\n\tdisplay: flex;\r\n}\r\n\r\n.marker-color-container {\r\n\tpadding-top: 10px;\r\n\tcolor: gray;\r\n}\r\n\r\n.marker-container {\r\n\tpadding-top: 10px;\r\n\tcolor: red;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 10px;\n}\n\n.pac-target-input {\n\twidth: 40%;\n    height: 40px;\n   \tposition: absolute;\n   \tz-index: 1;\n}\n.save-btn {\n\tpadding-top: 3px;\n\tpadding-left: 9rem;\n}\n\n.edit-container-style {\n\tpadding-top: 5px;\n}\n\n.main-marker-container{\n\tdisplay: flex;\n}\n\n.marker-color-container {\n\tpadding-top: 10px;\n\tcolor: gray;\n}\n\n.marker-container {\n\tpadding-top: 10px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
