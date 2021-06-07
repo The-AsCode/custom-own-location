@@ -3,6 +3,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+
 export default class Markers extends React.Component {
 
   state = {
@@ -17,23 +18,31 @@ export default class Markers extends React.Component {
 		return (
 			<div className="main-marker-container">
 				<React.Fragment>
-					<Container className="marker-color-container">
-						<Typography style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'32vw'}}>
-							<div>
-                <div onClick={this.handleRed}>Red</div>
-                <div onClick={this.handleGreen}>Green</div>
-                <div onClick={this.handleBlue}>Blue</div>
+					<div className="marker-color-container">
+						<Typography className="marker-color-section" style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'34.5vw'}}>
+              <div className="marker-heading">
+                Color:
+              </div>
+							<div className="marker-icon-color-section">
+                <div className="marker-icon-color" onClick={this.handleRed} style={{ backgroundColor: '#C6302A', height: '35px', width:'35px'}} />
+                <div className="marker-icon-color" onClick={this.handleGreen} style={{ backgroundColor: '#98C56A', height: '35px', width:'35px'}} />
+                <div className="marker-icon-color" onClick={this.handleBlue} style={{ backgroundColor: '#508F9F', height: '35px', width:'35px'}} />
               </div>
 						</Typography>
-					</Container>
+					</div>
 
-					<Container className="marker-container">
-						<Typography style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'32vw'}}>
-              <img src={this.state.iconType.home} height={56} width={45} />
-              <img src={this.state.iconType.office} height={56} width={45} />
-              <img src={this.state.iconType.restaurant} height={56} width={45} />
+					<div className="marker-container">
+						<Typography className="marker-icon-container" style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'34.5vw'}}>
+              <div className="marker-heading">
+                Marker:
+              </div>
+              <div>
+                <img className='marker-icon' src={this.state.iconType.home} height={56} width={45} />
+                <img className='marker-icon' src={this.state.iconType.office} height={56} width={45} />
+                <img className='marker-icon' src={this.state.iconType.restaurant} height={56} width={45} />
+              </div>
 						</Typography>
-					</Container>
+					</div>
 				</React.Fragment>
 			</div>
 		)

@@ -22,23 +22,23 @@ class EditMaps extends React.Component {
 				<React.Fragment>
 			      <CssBaseline />
 			      <Container>
-			        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '80vh', width: '15.5vw' }}>
-			        	<div className="save-btn">
+			        <Typography component="div" className="edit-map-container" style={{ backgroundColor: '#cfe8fc', height: '80vh', width: '17.5vw'}}>
+                <div className="save-btn">
 			        		<Button variant="contained" color="primary"> Save </Button>
 			        	</div>
 			        	<div className="edit-container-style">
-			        		<TextField style={{width: '15.5vw'}} label="Location Title" defaultValue="Location" />
+			        		<TextField style={{width: '17vw'}} label="Location Title" defaultValue="Location" />
 			        	</div>
 			        	<div className="edit-container-style">
 			        		<TextField 
-                    style={{width: '15.5vw'}} 
+                    style={{width: '17vw'}} 
                     label="Location coordinates" 
                     placeholder="Lat Lng"
                     value={this.getLatLng()}
                   />
 			        	</div>
 			        	<div className="edit-container-style">
-			        		<TextField style={{width: '15.5vw'}} label="Shortcode" defaultValue="Shortcode" />
+			        		<TextField style={{width: '17vw'}} label="Shortcode" defaultValue="Shortcode" />
 			        	</div>
 			       	</Typography>	 
 			      </Container>

@@ -11,22 +11,58 @@
 }
 .save-btn {
 	padding-top: 3px;
-	padding-left: 9rem;
+	padding-left: 212px;
 }
 
 .edit-container-style {
 	padding-top: 5px;
+	padding-left: 4px;
 }
 
-.main-marker-container{
+.main-marker-container {
 	display: flex;
+
 }
 
 .marker-color-container {
-	padding-top: 10px;
-	color: gray;
+	padding-top: 5px;
 }
 
 .marker-container {
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.edit-map-container {
+	border-radius: 4px;
+	font-size: 30px;
+}
+
+.marker-icon {
+	padding: 5px;
+}
+
+.marker-icon-container {
+	display: flex;
+}
+
+.marker-heading {
+	padding: 4px;
 	padding-top: 10px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.marker-color-section {
+	display: flex;
+}
+
+.marker-icon-color-section {
+	display: flex;
+}
+
+.marker-icon-color {
+	border-radius: 50px;
+	margin: 4.5px;
+	border-style: double;
 }

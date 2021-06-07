@@ -253,7 +253,7 @@ class CreateMaps extends React.Component {
                     />
                     <MarkersIcon/>
                 </div>
-                <div style={{marginLeft:"80%"}} >
+                <div style={{marginLeft:"80.5%"}} >
                     <EditMaps/>
                 </div>
             </div>
