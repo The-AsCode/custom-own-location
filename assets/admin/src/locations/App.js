@@ -1,10 +1,11 @@
-import React,{Component} from 'react';
-import { HashRouter as Router, Route, Link, Switch,} from "react-router-dom";
+import React, { Component } from 'react';
+import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Grid, Button } from '@material-ui/core';
 import MapList from './components/MapList';
 import CreateMaps from './components/maps/CreateMaps';
+import AddIcon from '@material-ui/icons/Add';
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <Router>
@@ -14,15 +15,21 @@ export default class App extends React.Component {
               <h1>Locations</h1>
             </Grid>
             <Grid item>
-                <Button variant="contained" color="primary"><Link to="/createmap">Add New Location</Link></Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                to="/createmap"
+                component={ Link }
+                startIcon={ <AddIcon /> }
+              >Add New Location</Button>
             </Grid>
           </Grid>
-            <Switch>
-              <Route path="/createmap" exact component={CreateMaps}/>
-              <MapList/>
-            </Switch>
+          <Switch>
+            <Route path="/createmap" exact component={ CreateMaps } />
+            <MapList />
+          </Switch>
         </div>
       </Router>
-    )
+    );
   }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import { Loader } from "@googlemaps/js-api-loader"
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
 
