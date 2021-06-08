@@ -237,6 +237,11 @@ class CreateMaps extends React.Component {
         ));
 
         return (
+          <>
+            <div className="heading-space">
+              <h1>Add New Location</h1>
+            </div>
+
             <div style = {{width: '85vw', height: '0vh'}}>
                 <div style={style}>
                     <LocationSearch
@@ -257,6 +262,7 @@ class CreateMaps extends React.Component {
                     <EditMaps/>
                 </div>
             </div>
+          </>
         )
     }
 }

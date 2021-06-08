@@ -1,17 +1,12 @@
 .col-base-wrapper {
 	padding-right: 20px;
-	padding-top: 10px;
+	padding-top: 20px;
 }
-
-.pac-target-input {
-	width: 40%;
-    height: 40px;
-   	position: absolute;
-   	z-index: 1;
+.col-base-wrapper h1 {
+	margin: 0;
 }
-.save-btn {
-	padding-top: 3px;
-	padding-left: 212px;
+.heading-space {
+	margin-bottom: 20px;
 }
 
 .edit-container-style {
