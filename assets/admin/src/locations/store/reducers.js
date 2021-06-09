@@ -15,6 +15,10 @@ const initialState = {
     markerPosition: {
       lat: 0,
       lng: 0,
+    },
+    markerIcon: {
+      type: "office",
+      color: "red",
     }
   },
 };
@@ -29,6 +33,18 @@ export default function(state = initialState, action) {
           ...action.payload
         }
       };
+
+      case types.UPDATE_MARKER_ICON:
+        return {
+          ...state,
+          mapForm: {
+            ...state.mapForm,
+            markerIcon: {
+              ...state.mapForm.markerIcon,
+              [ action.payload.changeType ]: action.payload.changeValue
+            }
+          }
+        };
 
     default:
       return state;

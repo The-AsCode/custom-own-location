@@ -16,7 +16,6 @@
 
 .main-marker-container {
 	display: flex;
-
 }
 
 .marker-color-container {
@@ -35,6 +34,7 @@
 
 .marker-icon {
 	padding: 5px;
+	cursor: pointer;
 }
 
 .marker-icon-container {
@@ -58,6 +58,7 @@
 
 .marker-icon-color {
 	border-radius: 50px;
-	margin: 4.5px;
+	margin: 5px;
 	border-style: double;
+	cursor: pointer;
 }

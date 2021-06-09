@@ -10,7 +10,7 @@ import Autocomplete from 'react-google-autocomplete';
 import EditMaps from './EditMaps';
 import MarkersIcon from './Markers';
 
-import { updateMapFormFields } from '../../store/actions.js';
+import { updateMapFormFields } from '../../store/actions';
 
 //map API key 
 const apiKey = colDeshboard.api_key;
@@ -23,25 +23,6 @@ Geocode.setApiKey(apiKey);
 Geocode.enableDebug();
 
 class CreateMaps extends React.Component {
-    constructor(props) {
-    super(props);
-        this.state = {
-            address: '',
-            city: '',
-            area: '',
-            state: '',
-            zoom: 40,
-            height: 400,
-            mapPosition: {
-                lat: 0,
-                lng: 0,
-            },
-            markerPosition: {
-                lat: 0,
-                lng: 0,
-            }
-        }
-    }
 
     componentDidMount() {
         if (navigator.geolocation) {
@@ -210,15 +191,15 @@ class CreateMaps extends React.Component {
             style = {style}
             options={mapOptions}
             defaultZoom={6}
-            defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
+            defaultCenter={{ lat: this.props.mapForm.mapPosition.lat, lng: this.props.mapForm.mapPosition.lng }}
           >
             <Marker
               icon={{
-                  url: colDeshboard.icon_red_home,
+                  url: this.getMarkerURL(),
                   anchor: new google.maps.Point(23, 56),
                   scaledSize: new google.maps.Size(45,56)
               }}
-              position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
+              position={{ lat: this.props.mapForm.markerPosition.lat, lng: this.props.mapForm.markerPosition.lng }}
               draggable={true}
               onDragEnd={this.onMarkerDragEnd}
               onClick={this.onMarkerClick}
@@ -226,9 +207,9 @@ class CreateMaps extends React.Component {
             
             <InfoWindow>
                 <div>
-                    Location: {this.state.address}
-                    Lat: {this.state.mapPosition.lat}
-                    Lng: {this.state.mapPosition.lng}
+                    Location: {this.props.mapForm.address}
+                    Lat: {this.props.mapForm.mapPosition.lat}
+                    Lng: {this.props.mapForm.mapPosition.lng}
                 </div>
             </InfoWindow>
 
@@ -265,9 +246,21 @@ class CreateMaps extends React.Component {
           </>
         )
     }
+
+  getMarkerURL = () => {
+    let markerIcon = this.props.mapForm.markerIcon;
+    let key = `icon_${ markerIcon.color }_${ markerIcon.type }`;
+
+    return colDeshboard[ key ];
+  }
+
 }
 
+const mapStateToProps = state => ( {
+  mapForm: state.mapForm
+} );
+
 export default connect(
-  null,
+  mapStateToProps,
   { updateMapFormFields }
 )(CreateMaps);

@@ -16072,7 +16072,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_google_autocomplete__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-google-autocomplete */ "./node_modules/react-google-autocomplete/index.js");
 /* harmony import */ var _EditMaps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditMaps */ "./assets/admin/src/locations/components/maps/EditMaps.js");
 /* harmony import */ var _Markers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Markers */ "./assets/admin/src/locations/components/maps/Markers.js");
-/* harmony import */ var _store_actions_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../store/actions.js */ "./assets/admin/src/locations/store/actions.js");
+/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../store/actions */ "./assets/admin/src/locations/store/actions.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -16122,12 +16122,16 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(CreateMaps);
 
-  function CreateMaps(props) {
+  function CreateMaps() {
     var _this;
 
     _classCallCheck(this, CreateMaps);
 
-    _this = _super.call(this, props);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "getCity", function (addressArray) {
       var city = '';
@@ -16225,22 +16229,12 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
       });
     });
 
-    _this.state = {
-      address: '',
-      city: '',
-      area: '',
-      state: '',
-      zoom: 40,
-      height: 400,
-      mapPosition: {
-        lat: 0,
-        lng: 0
-      },
-      markerPosition: {
-        lat: 0,
-        lng: 0
-      }
-    };
+    _defineProperty(_assertThisInitialized(_this), "getMarkerURL", function () {
+      var markerIcon = _this.props.mapForm.markerIcon;
+      var key = "icon_".concat(markerIcon.color, "_").concat(markerIcon.type);
+      return colDeshboard[key];
+    });
+
     return _this;
   }
 
@@ -16320,25 +16314,25 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
           options: mapOptions,
           defaultZoom: 6,
           defaultCenter: {
-            lat: _this3.state.mapPosition.lat,
-            lng: _this3.state.mapPosition.lng
+            lat: _this3.props.mapForm.mapPosition.lat,
+            lng: _this3.props.mapForm.mapPosition.lng
           },
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_2__.Marker, {
             icon: {
-              url: colDeshboard.icon_red_home,
+              url: _this3.getMarkerURL(),
               anchor: new google.maps.Point(23, 56),
               scaledSize: new google.maps.Size(45, 56)
             },
             position: {
-              lat: _this3.state.markerPosition.lat,
-              lng: _this3.state.markerPosition.lng
+              lat: _this3.props.mapForm.markerPosition.lat,
+              lng: _this3.props.mapForm.markerPosition.lng
             },
             draggable: true,
             onDragEnd: _this3.onMarkerDragEnd,
             onClick: _this3.onMarkerClick,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_google_maps__WEBPACK_IMPORTED_MODULE_2__.InfoWindow, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                children: ["Location: ", _this3.state.address, "Lat: ", _this3.state.mapPosition.lat, "Lng: ", _this3.state.mapPosition.lng]
+                children: ["Location: ", _this3.props.mapForm.address, "Lat: ", _this3.props.mapForm.mapPosition.lat, "Lng: ", _this3.props.mapForm.mapPosition.lng]
               })
             })
           })
@@ -16406,8 +16400,14 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
   return CreateMaps;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(null, {
-  updateMapFormFields: _store_actions_js__WEBPACK_IMPORTED_MODULE_7__.updateMapFormFields
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    mapForm: state.mapForm
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, {
+  updateMapFormFields: _store_actions__WEBPACK_IMPORTED_MODULE_7__.updateMapFormFields
 })(CreateMaps));
 
 /***/ }),
@@ -16570,11 +16570,12 @@ var mapStateToProps = function mapStateToProps(state) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Markers)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/actions */ "./assets/admin/src/locations/store/actions.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16605,7 +16606,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var Markers = /*#__PURE__*/function (_React$Component) {
   _inherits(Markers, _React$Component);
 
@@ -16622,42 +16622,10 @@ var Markers = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call.apply(_super, [this].concat(args));
 
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      iconType: {
-        home: colDeshboard.icon_red_home,
-        office: colDeshboard.icon_red_office,
-        restaurant: colDeshboard.icon_red_restaurant
-      }
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "handleRed", function () {
-      _this.setState({
-        iconType: {
-          home: colDeshboard.icon_red_home,
-          office: colDeshboard.icon_red_office,
-          restaurant: colDeshboard.icon_red_restaurant
-        }
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "handleGreen", function () {
-      _this.setState({
-        iconType: {
-          home: colDeshboard.icon_green_home,
-          office: colDeshboard.icon_green_office,
-          restaurant: colDeshboard.icon_green_restaurant
-        }
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "handleBlue", function () {
-      _this.setState({
-        iconType: {
-          home: colDeshboard.icon_blue_home,
-          office: colDeshboard.icon_blue_office,
-          restaurant: colDeshboard.icon_blue_restaurant
-        }
-      });
+    _defineProperty(_assertThisInitialized(_this), "getMarkerIconURL", function (type) {
+      var markerIcon = _this.props.markerIcon;
+      var key = "icon_".concat(markerIcon.color, "_").concat(type);
+      return colDeshboard[key];
     });
 
     return _this;
@@ -16666,83 +16634,98 @@ var Markers = /*#__PURE__*/function (_React$Component) {
   _createClass(Markers, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      var _this2 = this;
+
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "main-marker-container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "marker-color-container",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__.default, {
-              className: "marker-color-section",
-              style: {
-                backgroundColor: '#cfe8fc',
-                height: '15vh',
-                width: '34.5vw'
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "marker-heading",
-                children: "Color:"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                className: "marker-icon-color-section",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                  className: "marker-icon-color",
-                  onClick: this.handleRed,
-                  style: {
-                    backgroundColor: '#C6302A',
-                    height: '35px',
-                    width: '35px'
-                  }
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                  className: "marker-icon-color",
-                  onClick: this.handleGreen,
-                  style: {
-                    backgroundColor: '#98C56A',
-                    height: '35px',
-                    width: '35px'
-                  }
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                  className: "marker-icon-color",
-                  onClick: this.handleBlue,
-                  style: {
-                    backgroundColor: '#508F9F',
-                    height: '35px',
-                    width: '35px'
-                  }
-                })]
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "marker-color-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "marker-color-section",
+            style: {
+              backgroundColor: '#cfe8fc',
+              height: '15vh',
+              width: '34.5vw'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "marker-heading",
+              children: "Color:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              className: "marker-icon-color-section",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "marker-icon-color",
+                onClick: function onClick() {
+                  return _this2.props.changeMarkerIcon('color', 'red');
+                },
+                style: {
+                  backgroundColor: '#C6302A',
+                  height: '35px',
+                  width: '35px'
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "marker-icon-color",
+                onClick: function onClick() {
+                  return _this2.props.changeMarkerIcon('color', 'green');
+                },
+                style: {
+                  backgroundColor: '#98C56A',
+                  height: '35px',
+                  width: '35px'
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "marker-icon-color",
+                onClick: function onClick() {
+                  return _this2.props.changeMarkerIcon('color', 'blue');
+                },
+                style: {
+                  backgroundColor: '#508F9F',
+                  height: '35px',
+                  width: '35px'
+                }
               })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "marker-container",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_2__.default, {
-              className: "marker-icon-container",
-              style: {
-                backgroundColor: '#cfe8fc',
-                height: '15vh',
-                width: '34.5vw'
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                className: "marker-heading",
-                children: "Marker:"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  className: "marker-icon",
-                  src: this.state.iconType.home,
-                  height: 56,
-                  width: 45
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  className: "marker-icon",
-                  src: this.state.iconType.office,
-                  height: 56,
-                  width: 45
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-                  className: "marker-icon",
-                  src: this.state.iconType.restaurant,
-                  height: 56,
-                  width: 45
-                })]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "marker-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "marker-icon-container",
+            style: {
+              backgroundColor: '#cfe8fc',
+              height: '15vh',
+              width: '34.5vw'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "marker-heading",
+              children: "Marker:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                className: "marker-icon",
+                src: this.getMarkerIconURL('home'),
+                height: 56,
+                width: 45,
+                onClick: function onClick() {
+                  return _this2.props.changeMarkerIcon('type', 'home');
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                className: "marker-icon",
+                src: this.getMarkerIconURL('office'),
+                height: 56,
+                width: 45,
+                onClick: function onClick() {
+                  return _this2.props.changeMarkerIcon('type', 'office');
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                className: "marker-icon",
+                src: this.getMarkerIconURL('restaurant'),
+                height: 56,
+                width: 45,
+                onClick: function onClick() {
+                  return _this2.props.changeMarkerIcon('type', 'restaurant');
+                }
               })]
-            })
-          })]
-        })
+            })]
+          })
+        })]
       });
     }
   }]);
@@ -16750,7 +16733,15 @@ var Markers = /*#__PURE__*/function (_React$Component) {
   return Markers;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    markerIcon: state.mapForm.markerIcon
+  };
+};
 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, {
+  changeMarkerIcon: _store_actions__WEBPACK_IMPORTED_MODULE_2__.changeMarkerIcon
+})(Markers));
 
 /***/ }),
 
@@ -16789,9 +16780,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UPDATE_MAP_FORM_DATA": () => (/* binding */ UPDATE_MAP_FORM_DATA)
+/* harmony export */   "UPDATE_MAP_FORM_DATA": () => (/* binding */ UPDATE_MAP_FORM_DATA),
+/* harmony export */   "UPDATE_MARKER_ICON": () => (/* binding */ UPDATE_MARKER_ICON)
 /* harmony export */ });
 var UPDATE_MAP_FORM_DATA = "UPDATE_MAP_FORM_DATA";
+var UPDATE_MARKER_ICON = "UPDATE_MARKER_ICON";
 
 /***/ }),
 
@@ -16804,7 +16797,8 @@ var UPDATE_MAP_FORM_DATA = "UPDATE_MAP_FORM_DATA";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "updateMapFormFields": () => (/* binding */ updateMapFormFields)
+/* harmony export */   "updateMapFormFields": () => (/* binding */ updateMapFormFields),
+/* harmony export */   "changeMarkerIcon": () => (/* binding */ changeMarkerIcon)
 /* harmony export */ });
 /* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionTypes */ "./assets/admin/src/locations/store/actionTypes.js");
 
@@ -16812,6 +16806,15 @@ var updateMapFormFields = function updateMapFormFields(fields) {
   return {
     type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__.UPDATE_MAP_FORM_DATA,
     payload: fields
+  };
+};
+var changeMarkerIcon = function changeMarkerIcon(changeType, changeValue) {
+  return {
+    type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__.UPDATE_MARKER_ICON,
+    payload: {
+      changeType: changeType,
+      changeValue: changeValue
+    }
   };
 };
 
@@ -16870,6 +16873,10 @@ var initialState = {
     markerPosition: {
       lat: 0,
       lng: 0
+    },
+    markerIcon: {
+      type: "office",
+      color: "red"
     }
   }
 };
@@ -16881,6 +16888,13 @@ var initialState = {
     case _actionTypes__WEBPACK_IMPORTED_MODULE_0__.UPDATE_MAP_FORM_DATA:
       return _objectSpread(_objectSpread({}, state), {}, {
         mapForm: _objectSpread(_objectSpread({}, state.mapForm), action.payload)
+      });
+
+    case _actionTypes__WEBPACK_IMPORTED_MODULE_0__.UPDATE_MARKER_ICON:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        mapForm: _objectSpread(_objectSpread({}, state.mapForm), {}, {
+          markerIcon: _objectSpread(_objectSpread({}, state.mapForm.markerIcon), {}, _defineProperty({}, action.payload.changeType, action.payload.changeValue))
+        })
       });
 
     default:
@@ -19425,7 +19439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 20px;\n}\n.col-base-wrapper h1 {\n\tmargin: 0;\n}\n.heading-space {\n\tmargin-bottom: 20px;\n}\n\n.edit-container-style {\n\tpadding-top: 5px;\n\tpadding-left: 4px;\n}\n\n.main-marker-container {\n\tdisplay: flex;\n\n}\n\n.marker-color-container {\n\tpadding-top: 5px;\n}\n\n.marker-container {\n\tpadding-top: 5px;\n\tpadding-left: 10px;\n}\n\n.edit-map-container {\n\tborder-radius: 4px;\n\tfont-size: 30px;\n}\n\n.marker-icon {\n\tpadding: 5px;\n}\n\n.marker-icon-container {\n\tdisplay: flex;\n}\n\n.marker-heading {\n\tpadding: 4px;\n\tpadding-top: 10px;\n\tfont-weight: bold;\n\tfont-family: sans-serif;\n}\n\n.marker-color-section {\n\tdisplay: flex;\n}\n\n.marker-icon-color-section {\n\tdisplay: flex;\n}\n\n.marker-icon-color {\n\tborder-radius: 50px;\n\tmargin: 4.5px;\n\tborder-style: double;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 20px;\n}\n.col-base-wrapper h1 {\n\tmargin: 0;\n}\n.heading-space {\n\tmargin-bottom: 20px;\n}\n\n.edit-container-style {\n\tpadding-top: 5px;\n\tpadding-left: 4px;\n}\n\n.main-marker-container {\n\tdisplay: flex;\n}\n\n.marker-color-container {\n\tpadding-top: 5px;\n}\n\n.marker-container {\n\tpadding-top: 5px;\n\tpadding-left: 10px;\n}\n\n.edit-map-container {\n\tborder-radius: 4px;\n\tfont-size: 30px;\n}\n\n.marker-icon {\n\tpadding: 5px;\n\tcursor: pointer;\n}\n\n.marker-icon-container {\n\tdisplay: flex;\n}\n\n.marker-heading {\n\tpadding: 4px;\n\tpadding-top: 10px;\n\tfont-weight: bold;\n\tfont-family: sans-serif;\n}\n\n.marker-color-section {\n\tdisplay: flex;\n}\n\n.marker-icon-color-section {\n\tdisplay: flex;\n}\n\n.marker-icon-color {\n\tborder-radius: 50px;\n\tmargin: 5px;\n\tborder-style: double;\n\tcursor: pointer;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
