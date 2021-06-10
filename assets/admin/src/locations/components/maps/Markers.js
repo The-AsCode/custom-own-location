@@ -1,17 +1,18 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { changeMarkerIcon } from "../../store/actions";
+import { Grid, Box } from '@material-ui/core';
 
 class Markers extends React.Component {
 
 	render() {
 		return (
-			<div className="main-marker-container">
-        <div className="marker-color-container">
-          <div className="marker-color-section" style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'34.5vw'}}>
+      <Grid container spacing={ 4 }>
+        <Grid item sm={ 6 }>
+          <Box style={{ backgroundColor: '#cfe8fc' }} height="70px" mt={4} p={2} display="flex">
             <div className="marker-heading">Color:</div>
 
-            <div className="marker-icon-color-section">
+            <Box display="flex">
               <div className="marker-icon-color"
                 onClick={() => this.props.changeMarkerIcon('color', 'red')}
                 style={{ backgroundColor: '#C6302A', height: '35px', width:'35px'}}
@@ -24,12 +25,12 @@ class Markers extends React.Component {
                 onClick={() => this.props.changeMarkerIcon('color', 'blue')}
                 style={{ backgroundColor: '#508F9F', height: '35px', width:'35px'}}
               />
-            </div>
-          </div>
-        </div>
+            </Box>
+          </Box>
+        </Grid>
 
-        <div className="marker-container">
-          <div className="marker-icon-container" style={{ backgroundColor: '#cfe8fc', height: '15vh', width:'34.5vw'}}>
+        <Grid item sm={ 6 }>
+          <Box style={{ backgroundColor: '#cfe8fc' }} height="70px" mt={4} p={2} display="flex">
             <div className="marker-heading">Marker:</div>
             <div>
               <img className="marker-icon"
@@ -51,9 +52,9 @@ class Markers extends React.Component {
                 onClick={() => this.props.changeMarkerIcon('type', 'restaurant')}
               />
             </div>
-          </div>
-        </div>
-			</div>
+          </Box>
+        </Grid>
+			</Grid>
 		)
 	}
 

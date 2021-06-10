@@ -9,24 +9,6 @@
 	margin-bottom: 20px;
 }
 
-.edit-container-style {
-	padding-top: 5px;
-	padding-left: 4px;
-}
-
-.main-marker-container {
-	display: flex;
-}
-
-.marker-color-container {
-	padding-top: 5px;
-}
-
-.marker-container {
-	padding-top: 5px;
-	padding-left: 10px;
-}
-
 .edit-map-container {
 	border-radius: 4px;
 	font-size: 30px;
@@ -46,14 +28,6 @@
 	padding-top: 10px;
 	font-weight: bold;
 	font-family: sans-serif;
-}
-
-.marker-color-section {
-	display: flex;
-}
-
-.marker-icon-color-section {
-	display: flex;
 }
 
 .marker-icon-color {

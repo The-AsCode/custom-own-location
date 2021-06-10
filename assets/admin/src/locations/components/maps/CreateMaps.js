@@ -7,6 +7,7 @@ import { withGoogleMap,
     Marker } from "react-google-maps";
 import Geocode from "react-geocode";
 import Autocomplete from 'react-google-autocomplete';
+import Grid from '@material-ui/core/Grid';
 import EditMaps from './EditMaps';
 import MarkersIcon from './Markers';
 
@@ -219,26 +220,26 @@ class CreateMaps extends React.Component {
               <h1>Add New Location</h1>
             </div>
 
-            <div style = {{width: '85vw', height: '0vh'}}>
-                <div style={style}>
-                    <LocationSearch
-                        googleMapURL= {googleMapURLWithKey}
-                        loadingElement={<div style={{ height: '10%' }} />}
-                        containerElement={<div style={{ height: '',}} />}
-                        mapElement={<div style={{ height: '10%' }} />}
-                    />
-                    <MapWithAMarker
-                      googleMapURL={googleMapURLWithKey}
-                      loadingElement={<div style={{ height: '100%' }} />}
-                      containerElement={<div style={{ height: '300px'}} />}
-                      mapElement={<div style={{ height: '100%' }} />}
-                    />
-                    <MarkersIcon/>
-                </div>
-                <div style={{marginLeft:"80.5%"}} >
-                    <EditMaps/>
-                </div>
-            </div>
+            <Grid container spacing={ 4 }>
+              <Grid item md={ 9 }>
+                <LocationSearch
+                  googleMapURL={ googleMapURLWithKey }
+                  loadingElement={ <div style={ { height: '10%' } } /> }
+                  containerElement={ <div style={ { height: '', } } /> }
+                  mapElement={ <div style={ { height: '10%' } } /> }
+                />
+                <MapWithAMarker
+                  googleMapURL={ googleMapURLWithKey }
+                  loadingElement={ <div style={ { height: '100%' } } /> }
+                  containerElement={ <div style={ { height: '300px' } } /> }
+                  mapElement={ <div style={ { height: '100%' } } /> }
+                />
+                <MarkersIcon />
+              </Grid>
+              <Grid item md={ 3 }>
+                <EditMaps />
+              </Grid>
+            </Grid>
           </>
         )
     }

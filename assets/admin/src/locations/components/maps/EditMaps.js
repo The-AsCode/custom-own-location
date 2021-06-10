@@ -1,13 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-
-import CreateMaps from './CreateMaps';
+import { TextField, Box, Button } from '@material-ui/core';
 
 class EditMaps extends React.Component {
 
@@ -16,36 +9,29 @@ class EditMaps extends React.Component {
           "," + this.props.mapForm.markerPosition.lng;
   }
 
-	render() {
-		return (
-			<div>
-				<React.Fragment>
-			      <CssBaseline />
-			      <Container>
-			        <Typography component="div" className="edit-map-container" style={{ backgroundColor: '#cfe8fc', height: '80vh', width: '17.5vw'}}>
-                <div className="save-btn">
-			        		<Button variant="contained" color="primary"> Save </Button>
-			        	</div>
-			        	<div className="edit-container-style">
-			        		<TextField style={{width: '17vw'}} label="Location Title" defaultValue="Location" />
-			        	</div>
-			        	<div className="edit-container-style">
-			        		<TextField 
-                    style={{width: '17vw'}} 
-                    label="Location coordinates" 
-                    placeholder="Lat Lng"
-                    value={this.getLatLng()}
-                  />
-			        	</div>
-			        	<div className="edit-container-style">
-			        		<TextField style={{width: '17vw'}} label="Shortcode" defaultValue="Shortcode" />
-			        	</div>
-			       	</Typography>	 
-			      </Container>
-			    </React.Fragment>
-			</div>
-		)
-	}
+  render() {
+    return (
+      <Box style={ { backgroundColor: '#cfe8fc' } } height="100%" p={2}>
+        <div className="save-btn">
+          <Button variant="contained" color="primary">Save</Button>
+        </div>
+        <Box pt={2}>
+          <TextField label="Location Title" defaultValue="Location" fullWidth />
+        </Box>
+        <Box pt={2}>
+          <TextField
+            fullWidth
+            label="Location coordinates"
+            placeholder="Lat Lng"
+            value={ this.getLatLng() }
+          />
+        </Box>
+        <Box pt={2}>
+          <TextField label="Shortcode" defaultValue="Shortcode" fullWidth />
+        </Box>
+      </Box>
+    )
+  }
 }
 
 const mapStateToProps = state => ({
