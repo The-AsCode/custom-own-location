@@ -16200,20 +16200,16 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "onPlaceSelected", function (place) {
-      console.log('plc', place);
-
       var address = place.formatted_address,
           addressArray = place.address_components,
           city = _this.getCity(addressArray),
           area = _this.getArea(addressArray),
           state = _this.getState(addressArray),
           latValue = place.geometry.location.lat(),
-          lngValue = place.geometry.location.lng();
+          lngValue = place.geometry.location.lng(); // Set these values in the state.
 
-      console.log('latvalue', latValue);
-      console.log('lngValue', lngValue); // Set these values in the state.
 
-      _this.setState({
+      _this.props.updateMapFormFields({
         address: address ? address : '',
         area: area ? area : '',
         city: city ? city : '',

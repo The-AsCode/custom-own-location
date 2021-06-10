@@ -124,33 +124,29 @@ class CreateMaps extends React.Component {
     }
 
     onPlaceSelected = (place) => {
-        console.log('plc', place);
-        const address = place.formatted_address,
-            addressArray = place.address_components,
-            city = this.getCity(addressArray),
-            area = this.getArea(addressArray),
-            state = this.getState(addressArray),
-            latValue = place.geometry.location.lat(),
-            lngValue = place.geometry.location.lng();
+      const address = place.formatted_address,
+        addressArray = place.address_components,
+        city = this.getCity(addressArray),
+        area = this.getArea(addressArray),
+        state = this.getState(addressArray),
+        latValue = place.geometry.location.lat(),
+        lngValue = place.geometry.location.lng();
 
-        console.log('latvalue', latValue)
-        console.log('lngValue', lngValue)
-
-        // Set these values in the state.
-        this.setState({
-            address: (address) ? address : '',
-            area: (area) ? area : '',
-            city: (city) ? city : '',
-            state: (state) ? state : '',
-            markerPosition: {
-                lat: latValue,
-                lng: lngValue
-            },
-            mapPosition: {  
-                lat: latValue,
-                lng: lngValue
-            },
-        })
+      // Set these values in the state.
+      this.props.updateMapFormFields({
+        address: (address) ? address : '',
+        area: (area) ? area : '',
+        city: (city) ? city : '',
+        state: (state) ? state : '',
+        markerPosition: {
+          lat: latValue,
+          lng: lngValue
+        },
+        mapPosition: {
+          lat: latValue,
+          lng: lngValue
+        },
+      });
     };
     
     render() {
