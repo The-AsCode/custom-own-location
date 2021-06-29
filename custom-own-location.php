@@ -44,8 +44,8 @@ final class Custom_Own_Location {
 	 */
  	private function __construct() {
 		$this->define_constants();
-
 		$this->run_admin_classes();
+		$this->run_front_classes();
  	}
 
 	/**
@@ -64,6 +64,15 @@ final class Custom_Own_Location {
 		new COL\Admin\Menu();
 		new COL\Admin\Enqueue();
 		new COL\Admin\Ajax();
+	}
+
+	/**
+	 * Initilize front classes
+	 */
+	private function run_front_classes() {
+		new COL\Front\Shortcode();
+		new COL\Front\Enqueue();
+
 	}
 
 }

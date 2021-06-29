@@ -17,9 +17,6 @@ import { updateMapFormFields } from '../../store/actions';
 const apiKey = colDeshboard.api_key;
 const googleMapURLWithKey= "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&v=3.exp&libraries=geometry,drawing,places";
 
-//icon link
-//link willbe here 
-
 Geocode.setApiKey(apiKey);
 Geocode.enableDebug();
 

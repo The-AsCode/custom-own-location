@@ -24,7 +24,6 @@ class Enqueue {
 			wp_enqueue_script( 'col_dashboard', $fileurl, [], filemtime( $filepath ), true );
 
 			wp_localize_script( 'col_dashboard', 'colDeshboard',  $this->dashboard_data() );
-
 		}
 
 		if ( 'col_page_col_setting' === $page ) {

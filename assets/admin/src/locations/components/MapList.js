@@ -8,9 +8,32 @@ import Paper from '@material-ui/core/Paper';
 import { Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import AddIcon from "@material-ui/icons/Add";
-import React from "react";
+import React, { useState, useEffect } from 'react';
+
 
 export default () => {
+
+  const [mapsName, setMapsName] = useState([]);
+  console.log(mapsName);
+  
+  useEffect(() => {
+    let data = {
+      'action': 'col_get_maps_action',
+    };
+
+    jQuery.post(ajaxurl, data, (response) => {
+      // console.log(response.data[0]['title']);
+      
+      let mapsInfo = response.data;
+      setMapsName(mapsInfo);
+
+      // {mapsInfo.map((post_content) => (
+      //   setMapsName(post_content['title'])
+      // ));}
+
+    });
+
+  }, [] );
 
   const rows = [
     {name: "name1"},
