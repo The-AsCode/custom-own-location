@@ -21,22 +21,42 @@ class Shortcode {
 		$map_id = shortcode_atts($defalut,$attr);
 		$post_data   = get_post($map_id['id']);
 
+		//post_content data
 		$map_info = maybe_unserialize($post_data->post_content);
+		$marker = $map_info['markerIcon'];
+		$marker_url = COL_DIR_URL . 'assets/icons/'.$marker['color'].'_'.$marker['type'].'.png';
 
-		//return print_r($map_info);
+		$lat_lng = $map_info['mapPosition'];
+
+		//return print_r($marker);
 		
 		ob_start(); ?>
-			<div id="col-map-<?php echo $post_data->ID; ?>" style="height: 200px; width: 500px; "></div>
+			<div id="col-map-<?php echo $post_data->ID; ?>" style="height: 400px; width: 700px; "></div>
 
 			<script type="text/javascript">
 				let map;
+				const myLatLng = { 
+					lat: <?php echo $lat_lng['lat']; ?>, 
+					lng: <?php echo $lat_lng['lng']; ?> 
+				};
+				var mapOptions = {
+					zoom: 4,
+					center: myLatLng
+				};
 
 				function initMap() {
-				  map = new google.maps.Map(document.getElementById("col-map-<?php echo $post_data->ID; ?>"), {
-				    center: { lat: -34.397, lng: 150.644 },
-				    zoom: 10,
-				  });
+					const image ="<?php echo $marker_url; ?>";
+				  	map = new google.maps.Map(document.getElementById("col-map-<?php echo $post_data->ID; ?>"),
+				  		mapOptions
+				  	);
+
+				  	new google.maps.Marker({
+				    	position: myLatLng,
+				    	map,
+				    	icon: image
+					});
 				}
+
 			</script>
 
 		<?php $map = ob_get_clean();
