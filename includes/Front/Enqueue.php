@@ -13,7 +13,7 @@ class Enqueue {
 
 	public function scripts () {
 		$api_key = get_option( 'col_map_api_key', null );
-		$fileurl = "https://maps.googleapis.com/maps/api/js?key=".$api_key."&libraries=geometry&callback=initMap";
+		$fileurl = "https://maps.googleapis.com/maps/api/js?key=".$api_key."&callback=initMap&libraries=&v=weekly";
 
 		wp_register_script( 'google_map_js', $fileurl, [], null, true );
 

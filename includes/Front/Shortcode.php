@@ -19,19 +19,22 @@ class Shortcode {
 		);
 
 		$map_id = shortcode_atts($defalut,$attr);
-		$post   = get_post($map_id['id']);
-		//return "<div id ='col-map-".$map_id['id']."'>Hello</div>";
+		$post_data   = get_post($map_id['id']);
+
+		$map_info = maybe_unserialize($post_data->post_content);
+
+		//return print_r($map_info);
 		
 		ob_start(); ?>
-			<div id="col-map-<?php echo $post->ID; ?>"></div>
+			<div id="col-map-<?php echo $post_data->ID; ?>" style="height: 200px; width: 500px; "></div>
 
 			<script type="text/javascript">
 				let map;
 
 				function initMap() {
-				  map = new google.maps.Map(document.getElementById("col-map-<?php echo $post->ID ?>"), {
+				  map = new google.maps.Map(document.getElementById("col-map-<?php echo $post_data->ID; ?>"), {
 				    center: { lat: -34.397, lng: 150.644 },
-				    zoom: 8,
+				    zoom: 10,
 				  });
 				}
 			</script>
