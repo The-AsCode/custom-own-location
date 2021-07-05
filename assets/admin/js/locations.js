@@ -17806,30 +17806,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       mapsName = _useState2[0],
-      setMapsName = _useState2[1];
+      setMapsData = _useState2[1];
 
-  console.log(mapsName);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var data = {
       'action': 'col_get_maps_action'
     };
     jQuery.post(ajaxurl, data, function (response) {
-      // console.log(response.data[0]['title']);
       var mapsInfo = response.data;
-      setMapsName(mapsInfo); // {mapsInfo.map((post_content) => (
-      //   setMapsName(post_content['title'])
-      // ));}
+      setMapsData(mapsInfo);
     });
   }, []);
-  var rows = [{
-    name: "name1"
-  }, {
-    name: "name3"
-  }, {
-    name: "name2"
-  }, {
-    name: "name5"
-  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__.default, {
       justify: "space-between",
@@ -17874,19 +17861,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__.default, {
-          children: rows.map(function (row) {
+          children: mapsName.map(function (row) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
                 component: "th",
                 scope: "row",
-                children: "Map Name"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
-                children: "Shortcode"
+                children: row.title
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                children: ["[col-map id=\"", row.id, "\"]"]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
                 align: "right",
                 children: "Actions"
               })]
-            }, row.name);
+            }, row.id);
           })
         })]
       })

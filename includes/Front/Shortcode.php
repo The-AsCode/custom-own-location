@@ -19,6 +19,7 @@ class Shortcode {
 		);
 
 		$map_id = shortcode_atts($defalut,$attr);
+		
 		$post_data   = get_post($map_id['id']);
 
 		//post_content data

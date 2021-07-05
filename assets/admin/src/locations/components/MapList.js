@@ -13,8 +13,7 @@ import React, { useState, useEffect } from 'react';
 
 export default () => {
 
-  const [mapsName, setMapsName] = useState([]);
-  console.log(mapsName);
+  const [mapsName, setMapsData] = useState([]);
   
   useEffect(() => {
     let data = {
@@ -22,25 +21,11 @@ export default () => {
     };
 
     jQuery.post(ajaxurl, data, (response) => {
-      // console.log(response.data[0]['title']);
-      
       let mapsInfo = response.data;
-      setMapsName(mapsInfo);
-
-      // {mapsInfo.map((post_content) => (
-      //   setMapsName(post_content['title'])
-      // ));}
-
+      setMapsData(mapsInfo);
     });
 
   }, [] );
-
-  const rows = [
-    {name: "name1"},
-    {name: "name3"},
-    {name: "name2"},
-    {name: "name5"}
-  ];
 
   return (
     <>
@@ -69,10 +54,10 @@ export default () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">Map Name</TableCell>
-                <TableCell>Shortcode</TableCell>
+            {mapsName.map((row) => (
+              <TableRow key={row.id}>
+                <TableCell component="th" scope="row">{row.title}</TableCell>
+                <TableCell>[col-map id="{row.id}"]</TableCell>
                 <TableCell align="right">Actions</TableCell>
               </TableRow>
             ))}
