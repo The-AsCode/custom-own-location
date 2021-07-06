@@ -27,6 +27,18 @@ export default () => {
 
   }, [] );
 
+  const deleteMap = (id,event) => {
+    let data = {
+      'action': 'col_delete_map_action',
+      'map_id': id
+    };
+
+    jQuery.post(ajaxurl, data, (response) => {
+      let mapsInfo = response.data;
+      setMapsData(mapsInfo);
+    });
+  }
+
   return (
     <>
       <Grid justify="space-between" container alignItems="center" className="heading-space">
@@ -58,7 +70,19 @@ export default () => {
               <TableRow key={row.id}>
                 <TableCell component="th" scope="row">{row.title}</TableCell>
                 <TableCell>[col-map id="{row.id}"]</TableCell>
-                <TableCell align="right">Actions</TableCell>
+                <TableCell align="right">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    to="/create-map"
+                    component={ Link }
+                  >Edit</Button>  
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick = {(e)=>deleteMap(row.id,e)}
+                  >Delete</Button>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

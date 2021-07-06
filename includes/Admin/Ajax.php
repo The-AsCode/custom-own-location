@@ -10,7 +10,7 @@ class Ajax {
 		add_action( 'wp_ajax_col_settings_from_action', [ $this, 'settings_from_action' ] );
 		add_action( 'wp_ajax_col_map_data_action', [ $this, 'map_data_action' ] );
 		add_action( 'wp_ajax_col_get_maps_action', [ $this, 'get_maps' ] );
-
+		add_action( 'wp_ajax_col_delete_map_action', [ $this, 'delete_map' ] );
 	}
 
 	/**
@@ -66,7 +66,25 @@ class Ajax {
 		$maps = array();
 
 		foreach ( $map_posts as $map ) {
-			//$map_data = maybe_unserialize( $map->post_content );
+			$map_data['id'] = $map->ID;
+			$map_data['title'] = $map->post_title;
+			$maps[] = $map_data;
+		}
+
+		wp_send_json_success($maps);
+	}
+
+	public function delete_map () {
+		$map_id = $_POST['map_id'];
+		wp_delete_post($map_id);
+
+		$map_posts = get_posts( array(
+			'post_type'	=> 'col_maps'
+		) );
+
+		$maps = array();
+
+		foreach ( $map_posts as $map ) {
 			$map_data['id'] = $map->ID;
 			$map_data['title'] = $map->post_title;
 			$maps[] = $map_data;

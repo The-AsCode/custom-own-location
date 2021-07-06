@@ -19,15 +19,19 @@ class Shortcode {
 		);
 
 		$map_id = shortcode_atts($defalut,$attr);
-		
 		$post_data   = get_post($map_id['id']);
 
 		//post_content data
-		$map_info = maybe_unserialize($post_data->post_content);
-		$marker = $map_info['markerIcon'];
-		$marker_url = COL_DIR_URL . 'assets/icons/'.$marker['color'].'_'.$marker['type'].'.png';
-
-		$lat_lng = $map_info['mapPosition'];
+		if(isset($post_data->post_content)){
+			$map_info = maybe_unserialize($post_data->post_content);
+			$marker = $map_info['markerIcon'];
+			$marker_url = COL_DIR_URL . 'assets/icons/'.$marker['color'].'_'.$marker['type'].'.png';
+			
+			$lat_lng = $map_info['mapPosition'];
+		}
+		else{
+			echo "There is no such a map! Please set map, or check the shortcode";
+		}
 
 		//return print_r($marker);
 		

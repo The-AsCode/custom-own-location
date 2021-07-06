@@ -17817,6 +17817,18 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       setMapsData(mapsInfo);
     });
   }, []);
+
+  var deleteMap = function deleteMap(id, event) {
+    var data = {
+      'action': 'col_delete_map_action',
+      'map_id': id
+    };
+    jQuery.post(ajaxurl, data, function (response) {
+      var mapsInfo = response.data;
+      setMapsData(mapsInfo);
+    });
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__.default, {
       justify: "space-between",
@@ -17869,9 +17881,22 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 children: row.title
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
                 children: ["[col-map id=\"", row.id, "\"]"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
                 align: "right",
-                children: "Actions"
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__.default, {
+                  variant: "outlined",
+                  color: "primary",
+                  to: "/create-map",
+                  component: react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link,
+                  children: "Edit"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__.default, {
+                  variant: "outlined",
+                  color: "primary",
+                  onClick: function onClick(e) {
+                    return deleteMap(row.id, e);
+                  },
+                  children: "Delete"
+                })]
               })]
             }, row.id);
           })
