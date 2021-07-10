@@ -32,6 +32,7 @@ class EditMaps extends React.Component {
             label="Location coordinates"
             placeholder="Lat Lng"
             value={ this.getLatLng() }
+            onChange={this.handleMapCoordinates} 
           />
         </Box>
         <Box pt={2}>

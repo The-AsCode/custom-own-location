@@ -10,9 +10,20 @@ import { Link } from "react-router-dom";
 import AddIcon from "@material-ui/icons/Add";
 import React, { useState, useEffect } from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+  },
+});
 
 export default () => {
-
+  const classes = useStyles();
   const [mapsName, setMapsData] = useState([]);
   
   useEffect(() => {
@@ -27,7 +38,7 @@ export default () => {
 
   }, [] );
 
-  const deleteMap = (id,event) => {
+  const deleteMap = (id) => {
     let data = {
       'action': 'col_delete_map_action',
       'map_id': id
@@ -39,55 +50,77 @@ export default () => {
     });
   }
 
-  return (
-    <>
-      <Grid justify="space-between" container alignItems="center" className="heading-space">
-        <Grid item>
-          <h1>Locations</h1>
+  if(mapsName[0]==undefined){
+    return (
+      <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Typography variant="h5" component="h2">
+            There is no map to show. You can make a map by clicking Add New Location Button.
+          </Typography>
+        </CardContent>
+        <CardActions>
+            <Button
+              variant="outlined"
+              color="primary"
+              to="/create-map"
+              component={ Link }
+              startIcon={ <AddIcon /> }
+            >Add New Location</Button>
+        </CardActions>
+      </Card>
+    );
+  }
+  else{
+    return (
+      <>
+        <Grid justify="space-between" container alignItems="center" className="heading-space">
+          <Grid item>
+            <h1>Locations</h1>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="outlined"
+              color="primary"
+              to="/create-map"
+              component={ Link }
+              startIcon={ <AddIcon /> }
+            >Add New Location</Button>
+          </Grid>
         </Grid>
-        <Grid item>
-          <Button
-            variant="outlined"
-            color="primary"
-            to="/create-map"
-            component={ Link }
-            startIcon={ <AddIcon /> }
-          >Add New Location</Button>
-        </Grid>
-      </Grid>
 
-      <TableContainer component={Paper}>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell><strong>Map Name</strong></TableCell>
-              <TableCell><strong>Shortcode</strong></TableCell>
-              <TableCell align="right"><strong>Actions</strong></TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {mapsName.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell component="th" scope="row">{row.title}</TableCell>
-                <TableCell>[col-map id="{row.id}"]</TableCell>
-                <TableCell align="right">
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    to="/create-map"
-                    component={ Link }
-                  >Edit</Button>  
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    onClick = {(e)=>deleteMap(row.id,e)}
-                  >Delete</Button>
-                </TableCell>
+        <TableContainer component={Paper}>
+          <Table aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell><strong>Map Name</strong></TableCell>
+                <TableCell><strong>Shortcode</strong></TableCell>
+                <TableCell align="right"><strong>Actions</strong></TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
-  );
+            </TableHead>
+            <TableBody>
+              {mapsName.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell component="th" scope="row">{row.title}</TableCell>
+                  <TableCell>[col-map id="{row.id}"]</TableCell>
+                  <TableCell align="right">
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      to="/create-map"
+                      component={ Link }
+                    >Edit</Button>  
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      onClick = {(e)=>deleteMap(row.id)}
+                    >Delete</Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </>
+    );
+  }
 }

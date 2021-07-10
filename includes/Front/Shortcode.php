@@ -48,7 +48,10 @@ class Shortcode {
 
 		ob_start();
 		?>
-		<div id="col-map-<?php echo $post_data->ID; ?>" style="height: <?php echo $map_info['height'];?>px; width: <?php echo $map_info['height'];?>px;"></div>
+		<div id="col-map-<?php echo $post_data->ID; ?>" 
+			style="height: <?php echo $map_info['height'];?>px; 
+			width: <?php echo $map_info['width'];?>px;"
+		></div>
 
 		<script type="text/javascript">
 			var map;
