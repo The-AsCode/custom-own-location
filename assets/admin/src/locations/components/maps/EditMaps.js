@@ -35,6 +35,22 @@ class EditMaps extends React.Component {
           />
         </Box>
         <Box pt={2}>
+          <TextField 
+            onChange={this.handleMapHeight} 
+            label="Map Height (Default 400px)" 
+            defaultValue="400" 
+            fullWidth 
+          />
+        </Box>
+        <Box pt={2}>
+          <TextField 
+            onChange={this.handleMapWidht} 
+            label="Map Width (Default 700px)" 
+            defaultValue="700" 
+            fullWidth 
+          />
+        </Box>
+        <Box pt={2}>
           <TextField label="Shortcode" defaultValue="Shortcode" fullWidth />
         </Box>
 
@@ -55,6 +71,18 @@ class EditMaps extends React.Component {
   handleMapName = (e) => {
     this.setState({
       mapName: e.target.value,
+    })
+  }
+
+  handleMapHeight = (e) => {
+    this.props.updateMapFormFields({
+      height: e.target.value,
+    })
+  }
+
+  handleMapWidht = (e) => {
+    this.props.updateMapFormFields({
+      width: e.target.value,
     })
   }
 

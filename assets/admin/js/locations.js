@@ -18106,8 +18106,6 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
             }
           }, function () {
             react_geocode__WEBPACK_IMPORTED_MODULE_3__.default.fromLatLng(position.coords.latitude, position.coords.longitude).then(function (response) {
-              console.log(response);
-
               var address = response.results[0].formatted_address,
                   addressArray = response.results[0].address_components,
                   city = _this2.getCity(addressArray),
@@ -18344,6 +18342,18 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "handleMapHeight", function (e) {
+      _this.props.updateMapFormFields({
+        height: e.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleMapWidht", function (e) {
+      _this.props.updateMapFormFields({
+        width: e.target.value
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "handleMapData", function () {
       var data = {
         'action': 'col_map_data_action',
@@ -18403,6 +18413,22 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
             label: "Location coordinates",
             placeholder: "Lat Lng",
             value: this.getLatLng()
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
+          pt: 2,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+            onChange: this.handleMapHeight,
+            label: "Map Height (Default 400px)",
+            defaultValue: "400",
+            fullWidth: true
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
+          pt: 2,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
+            onChange: this.handleMapWidht,
+            label: "Map Width (Default 700px)",
+            defaultValue: "700",
+            fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
           pt: 2,
@@ -18757,6 +18783,7 @@ var initialState = {
     state: '',
     zoom: 40,
     height: 400,
+    width: 700,
     mapPosition: {
       lat: 0,
       lng: 0

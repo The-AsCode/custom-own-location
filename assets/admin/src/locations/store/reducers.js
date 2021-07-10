@@ -8,6 +8,7 @@ const initialState = {
     state: '',
     zoom: 40,
     height: 400,
+    width: 700,
     mapPosition: {
       lat: 0,
       lng: 0,
