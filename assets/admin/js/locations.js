@@ -18319,9 +18319,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Button/Button.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Add */ "./node_modules/@material-ui/icons/Add.js");
+/* harmony import */ var _material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/Add */ "./node_modules/@material-ui/icons/Add.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
 /* harmony import */ var _material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Card */ "./node_modules/@material-ui/core/esm/Card/Card.js");
@@ -18402,7 +18402,7 @@ var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__.default
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__.default, {
           variant: "h5",
           component: "h2",
-          children: "There is no map to show. You can make a map by clicking Add New Location Button."
+          children: "There is no map to show. You can create a map by clicking button below."
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_6__.default, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
@@ -18410,31 +18410,30 @@ var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__.default
           color: "primary",
           to: "/create-map",
           component: react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link,
-          startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_9__.default, {}),
-          children: "Add New Location"
+          children: "Create Map"
         })
       })]
     });
   } else {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
         justify: "space-between",
         container: true,
         alignItems: "center",
         className: "heading-space",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
           item: true,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
             children: "Locations"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
           item: true,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
             variant: "outlined",
             color: "primary",
             to: "/create-map",
             component: react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link,
-            startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_9__.default, {}),
+            startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_10__.default, {}),
             children: "Add New Location"
           })
         })]
@@ -18721,25 +18720,17 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
         width: '82%'
       };
       var mapOptions = {
-        scrollwheel: true,
-        zoomControlOptions: {
-          //   position: 'RIGHT_CENTER',    // as long as this is not set it works
-          style: 'SMALL'
-        },
-        mapTypeControlOptions: {
-          position: 'BOTTOM_LEFT' // this makes the map type control disappear
-
-        },
+        mapTypeControl: false,
         draggable: true,
         rotateControl: true,
-        scaleControl: true,
-        streetViewControl: {
-          position: 'BOTTOM_LEFT'
-        },
-        panControl: true
+        scaleControl: true
       };
       var LocationSearch = (0,react_google_maps__WEBPACK_IMPORTED_MODULE_2__.withScriptjs)((0,react_google_maps__WEBPACK_IMPORTED_MODULE_2__.withGoogleMap)(function (props) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_google_autocomplete__WEBPACK_IMPORTED_MODULE_4__.default, {
+          style: {
+            width: '30%',
+            height: '40px'
+          },
           onPlaceSelected: _this3.onPlaceSelected,
           types: ['(regions)']
         });
@@ -18812,7 +18803,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
               }),
               containerElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                 style: {
-                  height: '300px'
+                  height: '400px'
                 }
               }),
               mapElement: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
@@ -18948,7 +18939,6 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
         'map_name': _this.state.mapName,
         'map_data': _this.props.mapForm
       };
-      console.log(data);
       jQuery.post(ajaxurl, data, function (response) {
         _this.setState({
           successMessage: response.data.message
@@ -21946,7 +21936,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\r\n\tpadding-right: 20px;\r\n\tpadding-top: 20px;\r\n}\r\n.col-base-wrapper h1 {\r\n\tmargin: 0;\r\n}\r\n.heading-space {\r\n\tmargin-bottom: 20px;\r\n}\r\n\r\n.edit-map-container {\r\n\tborder-radius: 4px;\r\n\tfont-size: 30px;\r\n}\r\n\r\n.marker-icon {\r\n\tpadding: 5px;\r\n\tcursor: pointer;\r\n}\r\n\r\n.marker-icon-container {\r\n\tdisplay: flex;\r\n}\r\n\r\n.marker-heading {\r\n\tpadding: 4px;\r\n\tpadding-top: 10px;\r\n\tfont-weight: bold;\r\n\tfont-family: sans-serif;\r\n}\r\n\r\n.marker-icon-color {\r\n\tborder-radius: 50px;\r\n\tmargin: 5px;\r\n\tborder-style: double;\r\n\tcursor: pointer;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".col-base-wrapper {\n\tpadding-right: 20px;\n\tpadding-top: 20px;\n}\n.col-base-wrapper h1 {\n\tmargin: 0;\n}\n.heading-space {\n\tmargin-bottom: 20px;\n}\n\n.edit-map-container {\n\tborder-radius: 4px;\n\tfont-size: 30px;\n}\n\n.marker-icon {\n\tpadding: 5px;\n\tcursor: pointer;\n}\n\n.marker-icon-container {\n\tdisplay: flex;\n}\n\n.marker-heading {\n\tpadding: 4px;\n\tpadding-top: 10px;\n\tfont-weight: bold;\n\tfont-family: sans-serif;\n}\n\n.marker-icon-color {\n\tborder-radius: 50px;\n\tmargin: 5px;\n\tborder-style: double;\n\tcursor: pointer;\n}\n\n.pac-target-input {\n\tposition: absolute;\n\tz-index: 9999;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

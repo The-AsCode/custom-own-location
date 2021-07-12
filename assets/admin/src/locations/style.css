@@ -36,3 +36,8 @@
 	border-style: double;
 	cursor: pointer;
 }
+
+.pac-target-input {
+	position: absolute;
+	z-index: 9999;
+}

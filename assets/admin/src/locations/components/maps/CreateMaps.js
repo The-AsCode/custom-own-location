@@ -154,25 +154,15 @@ class CreateMaps extends React.Component {
         }
 
         let mapOptions = {
-          scrollwheel: true,
-          zoomControlOptions: {
-              //   position: 'RIGHT_CENTER',    // as long as this is not set it works
-              style: 'SMALL'
-          },
-          mapTypeControlOptions: {
-              position: 'BOTTOM_LEFT'     // this makes the map type control disappear
-          },
+          mapTypeControl: false,
           draggable: true,
           rotateControl: true,
           scaleControl: true,
-          streetViewControl: {
-            position: 'BOTTOM_LEFT' 
-          },
-          panControl: true,
         };
 
         const LocationSearch = withScriptjs(withGoogleMap(props =>
             <Autocomplete
+                style={{ width:'30%', height:'40px'}}
                 onPlaceSelected={this.onPlaceSelected}
                 types={['(regions)']}
             />
@@ -227,7 +217,7 @@ class CreateMaps extends React.Component {
                 <MapWithAMarker
                   googleMapURL={ googleMapURLWithKey }
                   loadingElement={ <div style={ { height: '100%' } } /> }
-                  containerElement={ <div style={ { height: '300px' } } /> }
+                  containerElement={ <div style={ { height: '400px' } } /> }
                   mapElement={ <div style={ { height: '100%' } } /> }
                 />
                 <MarkersIcon />

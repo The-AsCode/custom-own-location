@@ -94,8 +94,6 @@ class EditMaps extends React.Component {
       'map_data' : this.props.mapForm
     }
 
-    console.log(data);
-
     jQuery.post(ajaxurl, data, (response) => {
       this.setState({
         successMessage: response.data.message

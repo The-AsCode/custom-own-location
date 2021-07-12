@@ -40,8 +40,7 @@ class Ajax {
 		if( ! is_serialized( $map_data ) ) {
 		    $map_data = maybe_serialize($map_data);
 		}
-
-		// Create post object
+		
 		$map_post_data = array(
 			'post_author'	=> $user_id,
 		  	'post_title'    => $map_name,
@@ -50,7 +49,6 @@ class Ajax {
 		  	'post_status'	=> 'publish',
 		);
 		 
-		// Insert the post into the database
 		wp_insert_post( $map_post_data );
 
 		wp_send_json_success( [

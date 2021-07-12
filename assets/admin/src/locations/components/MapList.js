@@ -55,7 +55,7 @@ export default () => {
       <Card className={classes.root} variant="outlined">
         <CardContent>
           <Typography variant="h5" component="h2">
-            There is no map to show. You can make a map by clicking Add New Location Button.
+            There is no map to show. You can create a map by clicking button below.
           </Typography>
         </CardContent>
         <CardActions>
@@ -64,8 +64,7 @@ export default () => {
               color="primary"
               to="/create-map"
               component={ Link }
-              startIcon={ <AddIcon /> }
-            >Add New Location</Button>
+            >Create Map</Button>
         </CardActions>
       </Card>
     );
