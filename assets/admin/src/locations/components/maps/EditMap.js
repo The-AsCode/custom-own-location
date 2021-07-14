@@ -14,9 +14,9 @@ class EditMap extends React.Component {
 
     jQuery.post(ajaxurl, data, (response) => {
       let mapsInfo = response.data;
-      console.log(mapsInfo);
 
       this.props.updateMapFormFields({
+        mapName: mapsInfo.title,
         height: mapsInfo.height,
         width: mapsInfo.width,
         markerPosition: {

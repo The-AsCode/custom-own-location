@@ -18905,9 +18905,9 @@ var EditMap = /*#__PURE__*/function (_React$Component) {
       };
       jQuery.post(ajaxurl, data, function (response) {
         var mapsInfo = response.data;
-        console.log(mapsInfo);
 
         _this.props.updateMapFormFields({
+          mapName: mapsInfo.title,
           height: mapsInfo.height,
           width: mapsInfo.width,
           markerPosition: {
@@ -19087,7 +19087,7 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
             onChange: this.handleMapName,
             label: "Location Title",
-            defaultValue: "Location",
+            value: this.props.mapForm.mapName,
             fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {

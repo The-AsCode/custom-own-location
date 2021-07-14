@@ -23,7 +23,12 @@ class MapFrom extends React.Component {
           <Button onClick={this.handleMapData} variant="contained" color="primary">Save</Button>
         </div>
         <Box pt={2}>
-          <TextField onChange={this.handleMapName} label="Location Title" defaultValue="Location" fullWidth />
+          <TextField 
+            onChange={this.handleMapName} 
+            label="Location Title" 
+            value= {this.props.mapForm.mapName} 
+            fullWidth 
+          />
         </Box>
         <Box pt={2}>
           <TextField
