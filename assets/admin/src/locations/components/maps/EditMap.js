@@ -14,6 +14,7 @@ class EditMap extends React.Component {
 
     jQuery.post(ajaxurl, data, (response) => {
       let mapsInfo = response.data;
+      console.log(mapsInfo.marker.type);
 
       this.props.updateMapFormFields({
         mapName: mapsInfo.title,
@@ -26,7 +27,11 @@ class EditMap extends React.Component {
         mapPosition: {
           lat: parseFloat(mapsInfo.position.lat),
           lng: parseFloat(mapsInfo.position.lng)
-        },
+        },    
+        markerIcon: {
+          type: mapsInfo.marker.type,
+          color: mapsInfo.marker.color,
+        }
       });
 
     });

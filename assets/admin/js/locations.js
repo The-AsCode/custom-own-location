@@ -18905,6 +18905,7 @@ var EditMap = /*#__PURE__*/function (_React$Component) {
       };
       jQuery.post(ajaxurl, data, function (response) {
         var mapsInfo = response.data;
+        console.log(mapsInfo.marker.type);
 
         _this.props.updateMapFormFields({
           mapName: mapsInfo.title,
@@ -18917,6 +18918,10 @@ var EditMap = /*#__PURE__*/function (_React$Component) {
           mapPosition: {
             lat: parseFloat(mapsInfo.position.lat),
             lng: parseFloat(mapsInfo.position.lng)
+          },
+          markerIcon: {
+            type: mapsInfo.marker.type,
+            color: mapsInfo.marker.color
           }
         });
       });
@@ -19467,7 +19472,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   mapForm: {
-    mapName: '',
+    mapName: 'Map Name',
     address: '',
     city: '',
     area: '',

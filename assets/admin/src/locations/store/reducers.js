@@ -2,7 +2,7 @@ import * as types from "./actionTypes";
 
 const initialState = {
   mapForm: {
-    mapName: '',
+    mapName: 'Map Name',
     address: '',
     city: '',
     area: '',

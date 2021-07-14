@@ -105,7 +105,7 @@ class Ajax {
 		$map = array(
 			'title'			=> $map_info['title'],
 			'position'		=> $map_info['content']['mapPosition'],
-			'marker_color'	=> $map_info['content']['markerIcon'],
+			'marker'		=> $map_info['content']['markerIcon'],
 			'height'		=> $map_info['content']['height'],
 			'width'			=> $map_info['content']['width']
 		);

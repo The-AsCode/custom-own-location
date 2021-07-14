@@ -26,7 +26,7 @@ class MapFrom extends React.Component {
           <TextField 
             onChange={this.handleMapName} 
             label="Location Title" 
-            value= {this.props.mapForm.mapName} 
+            value={this.props.mapForm.mapName} 
             fullWidth 
           />
         </Box>
