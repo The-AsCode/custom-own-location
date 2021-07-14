@@ -18311,24 +18311,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
-/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
-/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
-/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
-/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
-/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Button/Button.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/Add */ "./node_modules/@material-ui/icons/Add.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/icons/Add */ "./node_modules/@material-ui/icons/Add.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
-/* harmony import */ var _material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Card */ "./node_modules/@material-ui/core/esm/Card/Card.js");
-/* harmony import */ var _material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/CardActions */ "./node_modules/@material-ui/core/esm/CardActions/CardActions.js");
-/* harmony import */ var _material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/CardContent */ "./node_modules/@material-ui/core/esm/CardContent/CardContent.js");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
+/* harmony import */ var _material_ui_core_Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Card */ "./node_modules/@material-ui/core/esm/Card/Card.js");
+/* harmony import */ var _material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/CardActions */ "./node_modules/@material-ui/core/esm/CardActions/CardActions.js");
+/* harmony import */ var _material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/CardContent */ "./node_modules/@material-ui/core/esm/CardContent/CardContent.js");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
+/* harmony import */ var _maps_EditMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./maps/EditMap */ "./assets/admin/src/locations/components/maps/EditMap.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -18360,7 +18361,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__.default)({
+
+var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__.default)({
   root: {
     minWidth: 275
   }
@@ -18395,87 +18397,87 @@ var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__.default
   };
 
   if (mapsName[0] == undefined) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_3__.default, {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_4__.default, {
       className: classes.root,
       variant: "outlined",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_4__.default, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_5__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_6__.default, {
           variant: "h5",
           component: "h2",
           children: "There is no map to show. You can create a map by clicking button below."
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_6__.default, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_7__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__.default, {
           variant: "outlined",
           color: "primary",
           to: "/create-map",
-          component: react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link,
+          component: react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link,
           children: "Create Map"
         })
       })]
     });
   } else {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
         justify: "space-between",
         container: true,
         alignItems: "center",
         className: "heading-space",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
           item: true,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
             children: "Locations"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
           item: true,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__.default, {
             variant: "outlined",
             color: "primary",
             to: "/create-map",
-            component: react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link,
-            startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_10__.default, {}),
+            component: react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link,
+            startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_icons_Add__WEBPACK_IMPORTED_MODULE_11__.default, {}),
             children: "Add New Location"
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_11__.default, {
-        component: _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_12__.default,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_13__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_12__.default, {
+        component: _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_13__.default,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_14__.default, {
           "aria-label": "simple table",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_14__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_15__.default, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_15__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_16__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
                   children: "Map Name"
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__.default, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
                   children: "Shortcode"
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__.default, {
                 align: "right",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
                   children: "Actions"
                 })
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_17__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_18__.default, {
             children: mapsName.map(function (row) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_15__.default, {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__.default, {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_16__.default, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__.default, {
                   component: "th",
                   scope: "row",
                   children: row.title
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__.default, {
                   children: ["[col-map id=\"", row.id, "\"]"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_16__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_17__.default, {
                   align: "right",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__.default, {
                     variant: "outlined",
                     color: "primary",
-                    to: "/create-map",
-                    component: react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link,
+                    to: '/edit-map/' + row.id,
+                    component: react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link,
                     children: "Edit"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__.default, {
                     variant: "outlined",
                     color: "primary",
                     onClick: function onClick(e) {
@@ -18512,7 +18514,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_geocode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-geocode */ "./node_modules/react-geocode/lib/index.js");
 /* harmony import */ var react_google_autocomplete__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-google-autocomplete */ "./node_modules/react-google-autocomplete/index.js");
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Grid */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
-/* harmony import */ var _EditMaps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditMaps */ "./assets/admin/src/locations/components/maps/EditMaps.js");
+/* harmony import */ var _MapFrom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MapFrom */ "./assets/admin/src/locations/components/maps/MapFrom.js");
 /* harmony import */ var _Markers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Markers */ "./assets/admin/src/locations/components/maps/Markers.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../store/actions */ "./assets/admin/src/locations/store/actions.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -18548,7 +18550,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- //map API key 
 
 
 
@@ -18815,7 +18816,7 @@ var CreateMaps = /*#__PURE__*/function (_React$Component) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9__.default, {
             item: true,
             md: 3,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_EditMaps__WEBPACK_IMPORTED_MODULE_5__.default, {})
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_MapFrom__WEBPACK_IMPORTED_MODULE_5__.default, {})
           })]
         })]
       });
@@ -18837,10 +18838,117 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./assets/admin/src/locations/components/maps/EditMaps.js":
-/*!****************************************************************!*\
-  !*** ./assets/admin/src/locations/components/maps/EditMaps.js ***!
-  \****************************************************************/
+/***/ "./assets/admin/src/locations/components/maps/EditMap.js":
+/*!***************************************************************!*\
+  !*** ./assets/admin/src/locations/components/maps/EditMap.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _CreateMaps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateMaps */ "./assets/admin/src/locations/components/maps/CreateMaps.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/actions */ "./assets/admin/src/locations/store/actions.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+var EditMap = /*#__PURE__*/function (_React$Component) {
+  _inherits(EditMap, _React$Component);
+
+  var _super = _createSuper(EditMap);
+
+  function EditMap() {
+    _classCallCheck(this, EditMap);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(EditMap, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this = this;
+
+      var id = this.props.match.params.id;
+      var data = {
+        'action': 'col_edit_maps_action',
+        'id': id
+      };
+      jQuery.post(ajaxurl, data, function (response) {
+        var mapsInfo = response.data;
+        console.log(mapsInfo);
+
+        _this.props.updateMapFormFields({
+          height: mapsInfo.height,
+          width: mapsInfo.width,
+          markerPosition: {
+            lat: parseFloat(mapsInfo.position.lat),
+            lng: parseFloat(mapsInfo.position.lng)
+          },
+          mapPosition: {
+            lat: parseFloat(mapsInfo.position.lat),
+            lng: parseFloat(mapsInfo.position.lng)
+          }
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_CreateMaps__WEBPACK_IMPORTED_MODULE_1__.default, {})
+      });
+    }
+  }]);
+
+  return EditMap;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    mapForm: state.mapForm
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_2__.connect)(mapStateToProps, {
+  updateMapFormFields: _store_actions__WEBPACK_IMPORTED_MODULE_3__.updateMapFormFields
+})(EditMap));
+
+/***/ }),
+
+/***/ "./assets/admin/src/locations/components/maps/MapFrom.js":
+/*!***************************************************************!*\
+  !*** ./assets/admin/src/locations/components/maps/MapFrom.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -18890,15 +18998,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var EditMaps = /*#__PURE__*/function (_React$Component) {
-  _inherits(EditMaps, _React$Component);
+var MapFrom = /*#__PURE__*/function (_React$Component) {
+  _inherits(MapFrom, _React$Component);
 
-  var _super = _createSuper(EditMaps);
+  var _super = _createSuper(MapFrom);
 
-  function EditMaps() {
+  function MapFrom() {
     var _this;
 
-    _classCallCheck(this, EditMaps);
+    _classCallCheck(this, MapFrom);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
@@ -18911,12 +19019,11 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      mapName: "",
       successMessage: ""
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleMapName", function (e) {
-      _this.setState({
+      _this.props.updateMapFormFields({
         mapName: e.target.value
       });
     });
@@ -18936,7 +19043,6 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "handleMapData", function () {
       var data = {
         'action': 'col_map_data_action',
-        'map_name': _this.state.mapName,
         'map_data': _this.props.mapForm
       };
       jQuery.post(ajaxurl, data, function (response) {
@@ -18959,7 +19065,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
     return _this;
   }
 
-  _createClass(EditMaps, [{
+  _createClass(MapFrom, [{
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
@@ -18998,7 +19104,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
             onChange: this.handleMapHeight,
             label: "Map Height (Default 400px)",
-            defaultValue: "400",
+            value: this.props.mapForm.height,
             fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
@@ -19006,7 +19112,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_6__.default, {
             onChange: this.handleMapWidht,
             label: "Map Width (Default 700px)",
-            defaultValue: "700",
+            value: this.props.mapForm.width,
             fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
@@ -19034,7 +19140,7 @@ var EditMaps = /*#__PURE__*/function (_React$Component) {
     }
   }]);
 
-  return EditMaps;
+  return MapFrom;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -19045,7 +19151,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, {
   updateMapFormFields: _store_actions__WEBPACK_IMPORTED_MODULE_2__.updateMapFormFields
-})(EditMaps));
+})(MapFrom));
 
 /***/ }),
 
@@ -19254,6 +19360,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_MapList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/MapList */ "./assets/admin/src/locations/components/MapList.js");
 /* harmony import */ var _components_maps_CreateMaps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/maps/CreateMaps */ "./assets/admin/src/locations/components/maps/CreateMaps.js");
+/* harmony import */ var _components_maps_EditMap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/maps/EditMap */ "./assets/admin/src/locations/components/maps/EditMap.js");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
@@ -19263,6 +19371,9 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   path: "/create-map",
   component: _components_maps_CreateMaps__WEBPACK_IMPORTED_MODULE_1__.default
+}, {
+  path: "/edit-map/:id",
+  component: _components_maps_EditMap__WEBPACK_IMPORTED_MODULE_2__.default
 }]);
 
 /***/ }),
@@ -19356,6 +19467,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   mapForm: {
+    mapName: '',
     address: '',
     city: '',
     area: '',

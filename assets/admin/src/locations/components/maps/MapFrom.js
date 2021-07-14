@@ -5,7 +5,7 @@ import { updateMapFormFields } from '../../store/actions';
 import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '@material-ui/lab/Alert';
 
-class EditMaps extends React.Component {
+class MapFrom extends React.Component {
 
   getLatLng = () => {
     return this.props.mapForm.markerPosition.lat + 
@@ -13,7 +13,6 @@ class EditMaps extends React.Component {
   }
 
   state = {
-    mapName: "",
     successMessage: "",
   };
 
@@ -39,7 +38,7 @@ class EditMaps extends React.Component {
           <TextField 
             onChange={this.handleMapHeight} 
             label="Map Height (Default 400px)" 
-            defaultValue="400" 
+            value={this.props.mapForm.height}
             fullWidth 
           />
         </Box>
@@ -47,7 +46,7 @@ class EditMaps extends React.Component {
           <TextField 
             onChange={this.handleMapWidht} 
             label="Map Width (Default 700px)" 
-            defaultValue="700" 
+            value={this.props.mapForm.width}
             fullWidth 
           />
         </Box>
@@ -70,7 +69,7 @@ class EditMaps extends React.Component {
   }
 
   handleMapName = (e) => {
-    this.setState({
+    this.props.updateMapFormFields({
       mapName: e.target.value,
     })
   }
@@ -90,7 +89,6 @@ class EditMaps extends React.Component {
   handleMapData = () => {
     let data = {
       'action' : 'col_map_data_action',
-      'map_name' : this.state.mapName,
       'map_data' : this.props.mapForm
     }
 
@@ -119,4 +117,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps, 
   { updateMapFormFields } 
-)(EditMaps);
+)(MapFrom);

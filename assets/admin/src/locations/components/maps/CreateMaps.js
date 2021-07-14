@@ -8,12 +8,10 @@ import { withGoogleMap,
 import Geocode from "react-geocode";
 import Autocomplete from 'react-google-autocomplete';
 import Grid from '@material-ui/core/Grid';
-import EditMaps from './EditMaps';
+import MapFrom from './MapFrom';
 import MarkersIcon from './Markers';
-
 import { updateMapFormFields } from '../../store/actions';
 
-//map API key 
 const apiKey = colDeshboard.api_key;
 const googleMapURLWithKey= "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&v=3.exp&libraries=geometry,drawing,places";
 
@@ -223,7 +221,7 @@ class CreateMaps extends React.Component {
                 <MarkersIcon />
               </Grid>
               <Grid item md={ 3 }>
-                <EditMaps />
+                <MapFrom />
               </Grid>
             </Grid>
           </>

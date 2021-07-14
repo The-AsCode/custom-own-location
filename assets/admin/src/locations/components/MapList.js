@@ -9,12 +9,13 @@ import { Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import AddIcon from "@material-ui/icons/Add";
 import React, { useState, useEffect } from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+
+import MapsAutoComplete from './maps/EditMap';
 
 const useStyles = makeStyles({
   root: {
@@ -105,7 +106,7 @@ export default () => {
                     <Button
                       variant="outlined"
                       color="primary"
-                      to="/create-map"
+                      to={'/edit-map/'+row.id}
                       component={ Link }
                     >Edit</Button>  
                     <Button

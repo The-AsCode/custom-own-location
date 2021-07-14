@@ -11,6 +11,7 @@ class Ajax {
 		add_action( 'wp_ajax_col_map_data_action', [ $this, 'map_data_action' ] );
 		add_action( 'wp_ajax_col_get_maps_action', [ $this, 'get_maps' ] );
 		add_action( 'wp_ajax_col_delete_map_action', [ $this, 'delete_map' ] );
+		add_action( 'wp_ajax_col_edit_maps_action', [ $this, 'edit_map' ] );
 	}
 
 	/**
@@ -33,9 +34,11 @@ class Ajax {
 	}
 
 	public function map_data_action() {
-		$map_name = $_POST['map_name'];
 		$map_data = $_POST['map_data'];
+		$map_name = $map_data['mapName'];
 		$user_id = get_current_user_id();
+
+		print_r($_POST);
 
 		if( ! is_serialized( $map_data ) ) {
 		    $map_data = maybe_serialize($map_data);
@@ -89,5 +92,24 @@ class Ajax {
 		}
 
 		wp_send_json_success($maps);
+	}
+
+	public function edit_map () {
+		$map_id = $_POST['id'];
+		$post = get_post($map_id);
+
+		$map_data['title'] = $post->post_title;
+		$map_data['content'] = maybe_unserialize($post->post_content);
+		$map_info = $map_data;
+
+		$map = array(
+			'title'			=> $map_info['title'],
+			'position'		=> $map_info['content']['mapPosition'],
+			'marker_color'	=> $map_info['content']['markerIcon'],
+			'height'		=> $map_info['content']['height'],
+			'width'			=> $map_info['content']['width']
+		);
+
+		wp_send_json_success($map);
 	}
 }
