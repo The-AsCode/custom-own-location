@@ -38,8 +38,6 @@ class Ajax {
 		$map_name = $map_data['mapName'];
 		$user_id = get_current_user_id();
 
-		print_r($_POST);
-
 		if( ! is_serialized( $map_data ) ) {
 		    $map_data = maybe_serialize($map_data);
 		}
@@ -103,6 +101,7 @@ class Ajax {
 		$map_info = $map_data;
 
 		$map = array(
+			'id'			=> $map_id,
 			'title'			=> $map_info['title'],
 			'position'		=> $map_info['content']['mapPosition'],
 			'marker'		=> $map_info['content']['markerIcon'],

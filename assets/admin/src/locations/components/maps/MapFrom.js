@@ -13,14 +13,21 @@ class MapFrom extends React.Component {
   }
 
   state = {
-    successMessage: "",
+    successMessage: '',
   };
+
+  shortCodeField = () => {
+    if ((this.props.mapForm.mapPage)=='edit-map'){
+      return <TextField label="Shortcode" value={this.props.mapForm.shortCode} fullWidth />
+    }
+  }
 
   render() {
     return (
       <Box style={ { backgroundColor: '#cfe8fc' } } height="100%" p={2}>
+      //:TO DO 
         <div className="save-btn">
-          <Button onClick={this.handleMapData} variant="contained" color="primary">Save</Button>
+          <Button onClick={this.handleMapData} variant="contained" color="primary">{this.state.btnName}</Button>
         </div>
         <Box pt={2}>
           <TextField 
@@ -56,7 +63,7 @@ class MapFrom extends React.Component {
           />
         </Box>
         <Box pt={2}>
-          <TextField label="Shortcode" defaultValue="Shortcode" fullWidth />
+          {this.shortCodeField()}
         </Box>
 
         <Snackbar
@@ -96,7 +103,6 @@ class MapFrom extends React.Component {
       'action' : 'col_map_data_action',
       'map_data' : this.props.mapForm
     }
-
     jQuery.post(ajaxurl, data, (response) => {
       this.setState({
         successMessage: response.data.message

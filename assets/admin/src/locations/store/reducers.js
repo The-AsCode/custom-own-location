@@ -21,7 +21,9 @@ const initialState = {
     markerIcon: {
       type: "office",
       color: "red",
-    }
+    },
+    mapPage: 'create-map',
+    shortCode: '',
   },
 };
 

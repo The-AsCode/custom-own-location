@@ -51,7 +51,7 @@ export default () => {
     });
   }
 
-  if(mapsName[0]==undefined){
+  if(mapsName == false){
     return (
       <Card className={classes.root} variant="outlined">
         <CardContent>

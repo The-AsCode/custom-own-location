@@ -14,7 +14,7 @@ class EditMap extends React.Component {
 
     jQuery.post(ajaxurl, data, (response) => {
       let mapsInfo = response.data;
-      console.log(mapsInfo.marker.type);
+      const shortCode = "[col-map id="+mapsInfo.id+"]";
 
       this.props.updateMapFormFields({
         mapName: mapsInfo.title,
@@ -31,7 +31,9 @@ class EditMap extends React.Component {
         markerIcon: {
           type: mapsInfo.marker.type,
           color: mapsInfo.marker.color,
-        }
+        },
+        mapPage: 'edit-map',
+        shortCode: shortCode
       });
 
     });

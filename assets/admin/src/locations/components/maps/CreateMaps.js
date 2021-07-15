@@ -198,10 +198,18 @@ class CreateMaps extends React.Component {
           </GoogleMap>
         ));
 
+        const pageTitle = () => {
+          if ((this.props.mapForm.mapPage)=='edit-map'){
+            return <h1>Edit Location</h1>
+          }else{
+            return <h1>Add New Location</h1>
+          }
+        }
+
         return (
           <>
             <div className="heading-space">
-              <h1>Add New Location</h1>
+              {pageTitle()}
             </div>
 
             <Grid container spacing={ 4 }>
