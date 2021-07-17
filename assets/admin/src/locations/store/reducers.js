@@ -23,7 +23,12 @@ const initialState = {
       color: "red",
     },
     mapPage: 'create-map',
-    shortCode: '',
+    editMapData : {
+      mapId: '',
+      shortCode: '',
+      buttonName: 'Save',
+      buttonAction : 'col_map_data_action'
+    }
   },
 };
 

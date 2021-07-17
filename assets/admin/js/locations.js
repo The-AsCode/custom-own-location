@@ -18935,7 +18935,12 @@ var EditMap = /*#__PURE__*/function (_React$Component) {
             color: mapsInfo.marker.color
           },
           mapPage: 'edit-map',
-          shortCode: shortCode
+          editMapData: {
+            mapId: id,
+            shortCode: shortCode,
+            buttonName: 'Update',
+            buttonAction: 'col_map_update_action'
+          }
         });
       });
     }
@@ -19044,7 +19049,7 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
       if (_this.props.mapForm.mapPage == 'edit-map') {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
           label: "Shortcode",
-          value: _this.props.mapForm.shortCode,
+          value: _this.props.mapForm.editMapData.shortCode,
           fullWidth: true
         });
       }
@@ -19070,8 +19075,9 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "handleMapData", function () {
       var data = {
-        'action': 'col_map_data_action',
-        'map_data': _this.props.mapForm
+        'action': _this.props.mapForm.editMapData.buttonAction,
+        'map_data': _this.props.mapForm,
+        'id': _this.props.mapForm.editMapData.id
       };
       jQuery.post(ajaxurl, data, function (response) {
         _this.setState({
@@ -19096,6 +19102,7 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
   _createClass(MapFrom, [{
     key: "render",
     value: function render() {
+      var mapData = this.props.mapForm;
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
         style: {
           backgroundColor: '#cfe8fc'
@@ -19108,14 +19115,14 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
             onClick: this.handleMapData,
             variant: "contained",
             color: "primary",
-            children: this.state.btnName
+            children: mapData.editMapData.buttonName
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
           pt: 2,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
             onChange: this.handleMapName,
             label: "Location Title",
-            value: this.props.mapForm.mapName,
+            value: mapData.mapName,
             fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -19132,7 +19139,7 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
             onChange: this.handleMapHeight,
             label: "Map Height (Default 400px)",
-            value: this.props.mapForm.height,
+            value: mapData.height,
             fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -19140,7 +19147,7 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__.default, {
             onChange: this.handleMapWidht,
             label: "Map Width (Default 700px)",
-            value: this.props.mapForm.width,
+            value: mapData.width,
             fullWidth: true
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -19512,7 +19519,12 @@ var initialState = {
       color: "red"
     },
     mapPage: 'create-map',
-    shortCode: ''
+    editMapData: {
+      mapId: '',
+      shortCode: '',
+      buttonName: 'Save',
+      buttonAction: 'col_map_data_action'
+    }
   }
 };
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {

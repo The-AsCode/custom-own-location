@@ -18,22 +18,23 @@ class MapFrom extends React.Component {
 
   shortCodeField = () => {
     if ((this.props.mapForm.mapPage)=='edit-map'){
-      return <TextField label="Shortcode" value={this.props.mapForm.shortCode} fullWidth />
+      return <TextField label="Shortcode" value={this.props.mapForm.editMapData.shortCode} fullWidth />
     }
   }
 
   render() {
+    let mapData = this.props.mapForm;
     return (
       <Box style={ { backgroundColor: '#cfe8fc' } } height="100%" p={2}>
       //:TO DO 
         <div className="save-btn">
-          <Button onClick={this.handleMapData} variant="contained" color="primary">{this.state.btnName}</Button>
+          <Button onClick={this.handleMapData} variant="contained" color="primary">{mapData.editMapData.buttonName}</Button>
         </div>
         <Box pt={2}>
           <TextField 
             onChange={this.handleMapName} 
             label="Location Title" 
-            value={this.props.mapForm.mapName} 
+            value={mapData.mapName} 
             fullWidth 
           />
         </Box>
@@ -50,7 +51,7 @@ class MapFrom extends React.Component {
           <TextField 
             onChange={this.handleMapHeight} 
             label="Map Height (Default 400px)" 
-            value={this.props.mapForm.height}
+            value={mapData.height}
             fullWidth 
           />
         </Box>
@@ -58,7 +59,7 @@ class MapFrom extends React.Component {
           <TextField 
             onChange={this.handleMapWidht} 
             label="Map Width (Default 700px)" 
-            value={this.props.mapForm.width}
+            value={mapData.width}
             fullWidth 
           />
         </Box>
@@ -100,8 +101,9 @@ class MapFrom extends React.Component {
 
   handleMapData = () => {
     let data = {
-      'action' : 'col_map_data_action',
-      'map_data' : this.props.mapForm
+      'action' : this.props.mapForm.editMapData.buttonAction,
+      'map_data' : this.props.mapForm,
+      'id' : this.props.mapForm.editMapData.id
     }
     jQuery.post(ajaxurl, data, (response) => {
       this.setState({

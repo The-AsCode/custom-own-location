@@ -33,7 +33,12 @@ class EditMap extends React.Component {
           color: mapsInfo.marker.color,
         },
         mapPage: 'edit-map',
-        shortCode: shortCode
+        editMapData: {
+          mapId: id,
+          shortCode: shortCode,
+          buttonName: 'Update',
+          buttonAction: 'col_map_update_action'
+        }
       });
 
     });
