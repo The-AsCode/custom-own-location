@@ -26,7 +26,6 @@ class MapFrom extends React.Component {
     let mapData = this.props.mapForm;
     return (
       <Box style={ { backgroundColor: '#cfe8fc' } } height="100%" p={2}>
-      //:TO DO 
         <div className="save-btn">
           <Button onClick={this.handleMapData} variant="contained" color="primary">{mapData.editMapData.buttonName}</Button>
         </div>

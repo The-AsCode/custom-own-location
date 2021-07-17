@@ -9,22 +9,9 @@ import { Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import AddIcon from "@material-ui/icons/Add";
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-
-import MapsAutoComplete from './maps/EditMap';
-
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-});
+import NoMapCard from './NoMapCard';
 
 export default () => {
-  const classes = useStyles();
   const [mapsName, setMapsData] = useState([]);
   
   useEffect(() => {
@@ -53,21 +40,9 @@ export default () => {
 
   if(mapsName == false){
     return (
-      <Card className={classes.root} variant="outlined">
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            There is no map to show. You can create a map by clicking button below.
-          </Typography>
-        </CardContent>
-        <CardActions>
-            <Button
-              variant="outlined"
-              color="primary"
-              to="/create-map"
-              component={ Link }
-            >Create Map</Button>
-        </CardActions>
-      </Card>
+      <div>
+        <NoMapCard />
+      </div>
     );
   }
   else{
