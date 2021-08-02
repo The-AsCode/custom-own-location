@@ -18943,7 +18943,7 @@ var EditMap = /*#__PURE__*/function (_React$Component) {
       };
       jQuery.post(ajaxurl, data, function (response) {
         var mapsInfo = response.data;
-        var shortCode = "[col-map id=" + mapsInfo.id + "]";
+        var shortCode = "[col-map id=\"".concat(mapsInfo.id, "\"]");
 
         _this.props.updateMapFormFields({
           mapName: mapsInfo.title,
@@ -19101,10 +19101,11 @@ var MapFrom = /*#__PURE__*/function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleMapData", function () {
+      var mapData = _this.props.mapForm;
       var data = {
-        'action': _this.props.mapForm.editMapData.buttonAction,
-        'map_data': _this.props.mapForm,
-        'id': _this.props.mapForm.editMapData.id
+        'action': mapData.editMapData.buttonAction,
+        'map_data': mapData,
+        'id': mapData.editMapData.id
       };
       jQuery.post(ajaxurl, data, function (response) {
         _this.setState({

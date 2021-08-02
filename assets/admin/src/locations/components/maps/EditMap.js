@@ -14,7 +14,7 @@ class EditMap extends React.Component {
 
     jQuery.post(ajaxurl, data, (response) => {
       let mapsInfo = response.data;
-      const shortCode = "[col-map id="+mapsInfo.id+"]";
+      const shortCode = `[col-map id="${mapsInfo.id}"]`;
 
       this.props.updateMapFormFields({
         mapName: mapsInfo.title,

@@ -99,10 +99,11 @@ class MapFrom extends React.Component {
   }
 
   handleMapData = () => {
+    let mapData = this.props.mapForm;
     let data = {
-      'action' : this.props.mapForm.editMapData.buttonAction,
-      'map_data' : this.props.mapForm,
-      'id' : this.props.mapForm.editMapData.id
+      'action' : mapData.editMapData.buttonAction,
+      'map_data' : mapData,
+      'id' : mapData.editMapData.id
     }
     jQuery.post(ajaxurl, data, (response) => {
       this.setState({
